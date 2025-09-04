@@ -4,49 +4,59 @@
 <meta charset="utf-8">
 <title>Bosforpack — Wicketed LDPE Mailers & 4×6 Labels</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Autobag/Sharp-compatible wicketed LDPE mailers (outer white / inner black, peel-and-seal, optional 35–50% PCR) + 4×6 direct-thermal labels. Weekly DAP Benelux.">
+<meta name="description" content="Autobag/Sharp-compatible wicketed LDPE mailers (outer white / inner black, peel-and-seal, optional 35–50% PCR) and 4×6 direct-thermal labels. Weekly DAP Benelux.">
+<meta property="og:title" content="Bosforpack — Wicketed LDPE Mailers & 4×6 Labels">
+<meta property="og:description" content="Autobag/Sharp-compatible wicketed LDPE mailers + 4×6 labels. Weekly DAP Benelux.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='12' width='64' height='64' fill='%231e293b'/%3E%3Cpath d='M12 22h40M12 32h40M12 42h40' stroke='%23a7f3d0' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#f6f8fb; --card:#fff; --ink:#0b1220; --mut:#667085;
-  --bd:#e6eaf2; --pri:#2563eb; --ok:#10b981; --warn:#f59e0b
+  --ink:#0b1220; --mut:#667085; --bg:#f6f8fb; --card:#fff;
+  --bd:#e6eaf2; --pri:#2456ea; --pri2:#0ea5a3; --ok:#10b981;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 a{color:var(--pri);text-decoration:none}
-.wrap{max-width:1100px;margin:0 auto;padding:20px}
-nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--bd);z-index:9}
-nav .wrap{display:flex;gap:16px;align-items:center}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--bd)}
+nav .bar{display:flex;align-items:center;gap:18px;height:64px}
 .logo{font-weight:800;letter-spacing:.3px}
-nav a.nav{padding:14px 10px;color:#111}
-.hero{padding:28px 0}
-h1{margin:6px 0 10px;font-size:clamp(28px,4vw,42px)}
-.lead{color:var(--mut);font-size:18px}
-.badges{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.badge{background:#eef2ff;border:1px solid #e0e7ff;color:#1e3a8a;border-radius:999px;padding:6px 10px;font-size:13px;white-space:nowrap}
-.btn{display:inline-block;padding:12px 16px;border-radius:10px;color:#fff;background:var(--pri);font-weight:700;margin-right:8px}
-.btn.sec{background:var(--ok);color:#032d1f}
-.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+nav a.nav{padding:10px 8px;color:#1f2937}
+.btn{display:inline-block;padding:12px 16px;border-radius:10px;font-weight:700}
+.btn.pri{background:var(--pri);color:#fff}
+.btn.sec{background:var(--ok);color:#053e2d}
+.hero{background:radial-gradient(1200px 400px at 50% -50%,#dbeafe,transparent),#0f172a;color:#e5edff}
+.hero .wrap{padding:56px 20px}
+h1{margin:0 0 10px;font-size:clamp(28px,4.5vw,46px);letter-spacing:.2px}
+.lead{color:#c7d2fe;font-size:18px;max-width:800px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.badge{background:#0b1220;border:1px solid #233; color:#9ad8ff; padding:6px 10px;border-radius:999px;font-size:13px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px}
-h2{margin:0 0 10px;font-size:26px}
-h3{margin:6px 0 8px;font-size:20px}
-ul.check{margin:10px 0 0 18px}
-ul.check li{margin:6px 0}
+h2{margin:0 0 12px;font-size:26px}
+h3{margin:0 0 8px;font-size:21px}
+.kv{width:100%;aspect-ratio:4/3;border-radius:12px;border:1px solid var(--bd);background:#eef2ff;display:grid;place-items:center;overflow:hidden}
+.kv img{width:100%;height:100%;object-fit:cover;display:block}
+.iconrow{display:flex;flex-wrap:wrap;gap:14px;margin:6px 0 0}
+.icon{display:flex;gap:10px;align-items:center;background:#f8fafc;border:1px solid #ecf0f6;padding:10px 12px;border-radius:12px;font-size:14px;color:#374151}
 .table{overflow:auto;border-radius:12px;border:1px solid var(--bd)}
 table{width:100%;border-collapse:collapse}
 th,td{padding:12px 14px;border-bottom:1px solid #eef1f5;text-align:left}
 th{background:#f8fafc}
-.notice{background:#fff8e1;border:1px dashed var(--warn);padding:10px;border-radius:10px;font-size:14px}
-.kv{width:100%;aspect-ratio:4/3;border-radius:12px;border:1px solid var(--bd);background:#eef2ff;display:grid;place-items:center;color:#667}
-.kv img{width:100%;height:100%;object-fit:cover;border-radius:12px;display:block}
-footer{margin:32px 0 40px;color:var(--mut);text-align:center}
-@media(min-width:900px){.hero .grid>.colL{grid-column:span 7}.hero .grid>.colR{grid-column:span 5}.grid2 .col{grid-column:span 6}}
-@media(max-width:899px){.grid>div{grid-column:span 12}}
+.note{background:#fff8e1;border:1px dashed #f59e0b;padding:10px;border-radius:10px;font-size:14px;margin-top:8px}
 .small{font-size:13px;color:var(--mut)}
+footer{color:var(--mut);text-align:center;padding:28px 0 40px}
+@media(min-width:980px){
+  .col-7{grid-column:span 7}.col-5{grid-column:span 5}.col-6{grid-column:span 6}
+}
+@media(max-width:979px){.grid>div{grid-column:span 12}}
 </style>
 </head>
 <body>
+
 <nav>
-  <div class="wrap">
+  <div class="wrap bar">
     <div class="logo">BOSFORPACK</div><div style="flex:1"></div>
     <a class="nav" href="#products">Products</a>
     <a class="nav" href="#specs">Specs</a>
@@ -56,118 +66,129 @@ footer{margin:32px 0 40px;color:var(--mut);text-align:center}
   </div>
 </nav>
 
-<section class="hero">
-  <div class="wrap grid">
-    <div class="colL card">
-      <h1>Wicketed LDPE Mailers & 4×6 Labels</h1>
-      <p class="lead"><b>Autobag/Sharp-compatible</b> wicketed mailers — <b>outer white / inner black</b>, <b>peel-and-seal</b>, optional <b>35–50% PCR</b>. Weekly <b>DAP Benelux</b>.</p>
-      <div class="badges">
-        <span class="badge">Autobag / Sharp compatible</span>
-        <span class="badge">REACH &amp; SVHC</span>
-        <span class="badge">Made in Türkiye</span>
-        <span class="badge">PCR 35–50% (option)</span>
-        <span class="badge">QC: micron &amp; seal</span>
+<header class="hero">
+  <div class="wrap">
+    <h1>Wicketed LDPE Mailers & 4×6 Labels</h1>
+    <p class="lead">Autobag/Sharp-compatible wicketed mailers — <b>outer white / inner black</b>, <b>peel-and-seal</b>, optional <b>35–50% PCR</b>. Weekly <b>DAP Benelux</b>. Built for 3PL, e-commerce fulfillment and postal lines.</p>
+    <div class="badges">
+      <span class="badge">Autobag / Sharp compatible</span>
+      <span class="badge">REACH &amp; SVHC</span>
+      <span class="badge">Made in Türkiye</span>
+      <span class="badge">QC: micron &amp; seal</span>
+      <span class="badge">PCR 35–50% (option)</span>
+    </div>
+    <div style="margin-top:16px">
+      <a class="btn pri" href="mailto:cihan@bosforpack.com?subject=Request%20sample%20kit%20—%20Bosforpack&body=Company%3A%0AAddress%3A%0AContact%3A%0ASizes%3A%0AMonthly%20qty%3A">Request FREE sample kit</a>
+      <a class="btn sec" href="mailto:cihan@bosforpack.com?subject=Wholesale%20%2F%20Private-label%20inquiry">Wholesale / Private-label</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" style="margin-top:18px">
+
+  <section id="products" class="grid">
+    <div class="col-7 card">
+      <h2>Why Bosforpack</h2>
+      <div class="iconrow">
+        <div class="icon">🔩 Hot-pin wicket, tight tolerances</div>
+        <div class="icon">🧪 Seal strength & micron control</div>
+        <div class="icon">🌱 35–50% PCR option</div>
+        <div class="icon">🚚 Weekly Benelux departures</div>
+        <div class="icon">🏷️ 4×6 labels (Zebra/Honeywell/Bixolon)</div>
       </div>
-      <p>
-        <a class="btn" href="mailto:cihan@bosforpack.com?subject=Request%20sample%20kit%20—%20Bosforpack&body=Company%3A%0AAddress%3A%0AContact%3A%0ASizes%3A%0AMonthly%20qty%3A">Request a FREE sample kit</a>
-        <a class="btn sec" href="mailto:cihan@bosforpack.com?subject=Wholesale%20%2F%20Private-label%20inquiry">Wholesale / Private-label</a>
-      </p>
-      <div class="notice">Prefer Nederlands? <a href="#nl">Klik hier voor de Nederlandse samenvatting.</a></div>
+      <div class="note">Prefer Nederlands? Vraag de Nederlandse samenvatting en PDF datasheet aan.</div>
     </div>
 
-    <div class="colR card">
-      <h3>Wicketed mailer bundle (sample photo)</h3>
+    <div class="col-5 card">
+      <h2>Gallery</h2>
+      <div class="kv" style="margin-bottom:10px">
+        <img alt="Wicketed bundle" src="assets/wicket-roll.jpg?v=2"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'small',innerHTML:'Upload <b>assets/wicket-roll.jpg</b>'}))">
+      </div>
       <div class="kv">
-        <img id="img1" alt="Wicketed mailer bundle"
-             src="assets/wicket-roll.jpg?v=20250904"
-             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'kv',innerHTML:'<div>Upload <b>assets/wicket-roll.jpg</b></div>'}))">
+        <img alt="Outer white / inner black (peel-and-seal)" src="assets/mailer-inner.jpg?v=2"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'small',innerHTML:'Upload <b>assets/mailer-inner.jpg</b>'}))">
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<a id="products"></a>
-<div class="wrap grid grid2">
-  <div class="col card">
-    <h2>Wicketed mailers</h2>
-    <ul class="check">
-      <li>LDPE co-extruded (<b>OW/IB</b>)</li>
-      <li><b>Peel-and-seal</b> tape, hot-pin wicket</li>
-      <li>S/M/L standard — custom sizes on request</li>
-      <li><b>PCR 35–50%</b> option</li>
-      <li>Bundles 200–250 pcs (Autobag/Sharp ready)</li>
-    </ul>
-  </div>
-
-  <div class="col card">
-    <h2>4×6″ Direct-thermal labels</h2>
-    <ul class="check">
-      <li>Size: <b>100×150 mm (4×6″)</b>, 500/roll, 76 mm core</li>
-      <li>Perforated &amp; gap-sensed</li>
-      <li>Compatible: Zebra, Honeywell, Bixolon</li>
-    </ul>
-    <div class="kv" style="margin-top:10px">
-      <img id="img2" alt="Mailer inner black / peel-and-seal"
-           src="assets/mailer-inner.jpg?v=20250904"
-           onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'kv',innerHTML:'<div>Upload <b>assets/mailer-inner.jpg</b></div>'}))">
+  <section id="specs" class="grid" style="margin-top:18px">
+    <div class="col-6 card">
+      <h2>Wicketed mailers — Technical specs</h2>
+      <div class="table">
+        <table>
+          <thead>
+            <tr><th>Size</th><th>Flat (mm)</th><th>Lip</th><th>Micron</th><th>Wicket pattern</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>S</td><td>170 × 240</td><td>+10</td><td>50–60 μ</td><td>Ø8 mm • 38 mm centre-to-centre • lip offset ≈25 mm</td></tr>
+            <tr><td>M</td><td>230 × 310</td><td>+10</td><td>60–70 μ</td><td>Ø8 mm • 38 mm centre-to-centre • lip offset ≈25 mm</td></tr>
+            <tr><td>L</td><td>300 × 400</td><td>+10</td><td>70–80 μ</td><td>Ø8 mm • 38 mm centre-to-centre • lip offset ≈25 mm</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">Custom hole patterns and lip offset can be matched to your Autobag / Sharp jig.</p>
     </div>
-  </div>
-</div>
 
-<a id="specs"></a>
-<div class="wrap card">
-  <h2>Technical specs</h2>
-  <div class="table">
-    <table>
-      <thead><tr><th>Size</th><th>Flat (mm)</th><th>Lip</th><th>Micron</th><th>Wicket</th></tr></thead>
-      <tbody>
-        <tr><td>S</td><td>170×240</td><td>+10</td><td>50–60 μ</td><td>Ø8 mm • 38 mm c/c • lip offset ≈25 mm</td></tr>
-        <tr><td>M</td><td>230×310</td><td>+10</td><td>60–70 μ</td><td>Ø8 mm • 38 mm c/c • lip offset ≈25 mm</td></tr>
-        <tr><td>L</td><td>300×400</td><td>+10</td><td>70–80 μ</td><td>Ø8 mm • 38 mm c/c • lip offset ≈25 mm</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="small">Custom hole pattern / lip offset available for specific Autobag/Sharp jigs.</p>
-</div>
+    <div class="col-6 card">
+      <h2>4×6″ Direct-thermal labels</h2>
+      <ul style="margin:6px 0 0 18px">
+        <li>100 × 150 mm (4×6″), 500/roll, 76 mm core</li>
+        <li>Perforated & gap-sensed</li>
+        <li>Compatible: Zebra, Honeywell, Bixolon</li>
+      </ul>
+      <div class="note" style="margin-top:10px">Datasheet & compliance PDF available upon request.</div>
+    </div>
+  </section>
 
-<a id="quality"></a>
-<div class="wrap grid grid2">
-  <div class="col card">
-    <h2>Quality &amp; compliance</h2>
-    <ul class="check">
-      <li>COA per batch (micron, width, seal strength)</li>
-      <li>REACH &amp; SVHC declaration</li>
-      <li>Total heavy metals &lt;100 ppm</li>
-      <li>Recycling code: LDPE (4) — PCR option</li>
-    </ul>
-  </div>
-  <div class="col card" id="nl">
-    <h2>Nederlands (kort)</h2>
-    <p>Autobag-compatibele <b>wicketzakken</b> (buiten wit / binnen zwart, <b>peel-and-seal</b>, optioneel <b>35–50% PCR</b>) en <b>4×6” labels</b>. Productie 10–14 dagen EXW. Benelux: wekelijks DAP (6–9 dagen, indicatief). Gratis samplekit & PDF op aanvraag.</p>
-  </div>
-</div>
+  <section id="quality" class="grid" style="margin-top:18px">
+    <div class="col-6 card">
+      <h2>Quality & Compliance</h2>
+      <ul style="margin:6px 0 0 18px">
+        <li>REACH & SVHC declaration</li>
+        <li>Total heavy metals &lt; 100 ppm</li>
+        <li>COA per batch (micron, width, seal strength)</li>
+        <li>Recycling code: LDPE (4); optional PCR 35–50%</li>
+      </ul>
+    </div>
+    <div class="col-6 card">
+      <h2>MOQ & Pricing</h2>
+      <p>MOQ and pricing depend on size, micron, PCR %, print (plain/1-2 colors) and delivery terms. Share your monthly usage and machine model to receive a tailored quote.</p>
+      <p><a class="btn pri" href="mailto:cihan@bosforpack.com?subject=Quote%20request%20—%20wicketed%20mailers&body=Company%2FAddress%3A%0ASizes%20%26%20micron%3A%0AExpected%20monthly%20qty%3A%0AMachine%20model%3A%0AIncoterm%3A">Request a quote</a></p>
+    </div>
+  </section>
 
-<a id="logistics"></a>
-<div class="wrap card">
-  <h2>Lead-times & logistics</h2>
-  <ul class="check">
-    <li>Production: <b>10–14 days EXW</b></li>
-    <li>Delivery: weekly road to <b>Benelux/Germany</b> — typical <b>6–9 days DAP</b>*</li>
-    <li>Incoterms: EXW / FCA Istanbul / DAP on request</li>
-    <li>Payment: prepayment for first orders; account terms after onboarding</li>
-  </ul>
-  <p class="small">*Transit times are indicative and depend on carrier capacity.</p>
-</div>
+  <section id="logistics" class="grid" style="margin-top:18px">
+    <div class="col-6 card">
+      <h2>Lead-times & Logistics</h2>
+      <ul style="margin:6px 0 0 18px">
+        <li>Production: <b>10–14 days EXW</b> (standard)</li>
+        <li>Weekly road service to <b>Benelux / Germany</b> — typical <b>6–9 days DAP</b> (indicative)</li>
+        <li>Incoterms: EXW / FCA Istanbul / DAP on request</li>
+        <li>Payment: prepayment for first orders; account terms after onboarding</li>
+      </ul>
+      <p class="small">Transit times may vary with carrier capacity and seasonal peaks.</p>
+    </div>
+    <div class="col-6 card">
+      <h2>Private-label & Printing</h2>
+      <ul style="margin:6px 0 0 18px">
+        <li>Plain white (outer) / black (inner) as default</li>
+        <li>1–2 spot color flexo print on request</li>
+        <li>Custom bundle counts & wicket headers</li>
+      </ul>
+    </div>
+  </section>
 
-<a id="contact"></a>
-<div class="wrap card">
-  <h2>Contact</h2>
-  <p><b>Cihan Ertek</b> — Bosforpack<br>
-    <a href="mailto:cihan@bosforpack.com">cihan@bosforpack.com</a> ·
-    <a href="tel:+905325211446">+90 532 521 14 46</a> ·
-    <a href="https://wa.me/905325211446?text=Hello%2C%20we%20need%20wicketed%20mailers%20and%204x6%20labels" target="_blank">WhatsApp</a>
-  </p>
-</div>
+  <section id="contact" class="card" style="margin-top:18px">
+    <h2>Contact</h2>
+    <p><b>Cihan Ertek</b> — Bosforpack<br>
+      <a href="mailto:cihan@bosforpack.com">cihan@bosforpack.com</a> ·
+      <a href="tel:+905325211446">+90 532 521 14 46</a> ·
+      <a href="https://wa.me/905325211446?text=Hello%2C%20we%20need%20wicketed%20mailers%20and%204x6%20labels" target="_blank">WhatsApp</a>
+    </p>
+  </section>
+
+</main>
 
 <footer>©️ <span id="y"></span> Bosforpack — Istanbul · Türkiye</footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
