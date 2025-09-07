@@ -1,6 +1,40 @@
 <!doctype html>
 <div class="cta-row">
   <a class="btn primary" href="/tools/landed-cost.html">Landed-Cost Calculator</a>
+  <section id="how-it-works" style="margin-top:32px;">
+  <div class="card" style="padding:16px;">
+    <h2>How it works</h2>
+    <p><em>MVP – indicative only. Always verify with your customs broker.</em></p>
+
+    <h3>Inputs</h3>
+    <ul>
+      <li><strong>Destination</strong>: country VAT rate preset (NL 21%, DE 19%, BE 21%, FR 20% …)</li>
+      <li><strong>Goods value (€)</strong>: ürün bedeli (FOB/EXW + mal bedeli)</li>
+      <li><strong>Freight + insurance (€)</strong>: nakliye + sigorta</li>
+      <li><strong>HS code (first 4 digits)</strong>: ör. 3923, 4202, 6109, 6204, 6403, 8517</li>
+      <li><strong>Clearance fee (€)</strong>: gümrük/komisyon</li>
+      <li><strong>Units</strong>: opsiyonel (birim başı maliyet için)</li>
+    </ul>
+
+    <h3>Calculation</h3>
+    <ol>
+      <li><strong>CIF</strong> = Goods value + Freight + Insurance</li>
+      <li><strong>Duty</strong> = CIF × duty rate  
+        <br><small>Presetler: 3923 ≈ 6.5%, 4202 ≈ 9%, 6109/6204 ≈ 12%, 6403 ≈ 17%, 8517 = 0%. (HS girilmezse “default” oran kullanılır.)</small>
+      </li>
+      <li><strong>VAT base</strong> = CIF + Duty + Clearance fee</li>
+      <li><strong>VAT</strong> = VAT base × destination VAT rate</li>
+      <li><strong>Landed cost</strong> = CIF + Duty + VAT + Clearance fee</li>
+      <li>Eğer <strong>Units</strong> girilmişse: <strong>Cost / unit</strong> = Landed cost ÷ Units</li>
+    </ol>
+
+    <h3>Notes</h3>
+    <ul>
+      <li>Oranlar yaklaşık MFN/EU örnekleri; anti-dumping, ek vergi, menşe ve anlaşmalar sonucu değişebilir.</li>
+      <li>FOB/CIF farklılıkları için forwarder/gümrükçünüzle teyit edin.</li>
+    </ul>
+  </div>
+</section>
   <a class="btn" href="/<a href="#how-it-works" class="btn btn-secondary">How it works?</a>
 </div>
 <html lang="en">
