@@ -1,5 +1,7 @@
 <!doctype html>
-<div class="cta-row">
+<div class="cta-row"> <a class="btn primary" href="https://YOURSTORE.lemonsqueezy.com/checkout/buy/PRODUCT_ID" target="_blank" rel="noopener">
+  Go Pro — €9
+</a>
   <a class="btn primary" href="/tools/landed-cost.html">Landed-Cost Calculator</a>
   <section id="how-it-works" style="margin-top:32px;">
   <div class="card" style="padding:16px;">
@@ -187,3 +189,57 @@ function calc(){
 </script>
 </body>
 </html>
+<section id="pro" style="margin:16px 0;padding:12px;border:1px solid #e5ecf5;border-radius:10px">
+  <strong>Have a Pro code?</strong>
+  <input id="proCode" placeholder="Enter code" style="padding:6px 8px;margin:0 6px;border:1px solid #ccd6e3;border-radius:8px">
+  <button id="proApply" style="padding:6px 10px;border-radius:8px">Unlock</button>
+  <div id="proFeatures" style="display:none;margin-top:10px">
+    <hr style="border:none;border-top:1px solid #eaeef5;margin:10px 0">
+    <p><b>Pro features</b>: branded PDF export, CSV download, save last inputs.</p>
+    <button id="btnPrintBranded" class="btn" type="button">Download branded PDF</button>
+    <button id="btnCsv" class="btn" type="button" style="margin-left:8px;">Export CSV</button>
+  </div>
+</section>
+
+<script>
+  // basit pro doğrulama (ilk sürüm)
+  const KEY = 'BOSFORPRO'; // ödemeden sonra e-posta ile gönderdiğin kod
+  const $ = (id)=>document.getElementById(id);
+
+  $('proApply')?.addEventListener('click', ()=>{
+    const ok = ($('proCode').value||'').trim() === KEY;
+    if(ok){
+      localStorage.setItem('bosforpack_pro','1');
+      $('proFeatures').style.display='block';
+      alert('Pro unlocked — enjoy!');
+    } else { alert('Invalid code'); }
+  });
+
+  // sayfa yeniden açıldığında açık kalsın
+  if(localStorage.getItem('bosforpack_pro')==='1'){
+    const box = document.getElementById('proFeatures');
+    if(box) box.style.display='block';
+  }
+
+  // Branded PDF = tarayıcı yazdır (şimdilik)
+  $('btnPrintBranded')?.addEventListener('click', ()=> window.print());
+
+  // CSV export — form alanlarını satır yap
+  $('btnCsv')?.addEventListener('click', ()=>{
+    const g = id => document.getElementById(id)?.value ?? '';
+    const lines = [
+      ['Destination', g('dest')],
+      ['Goods (€)', g('goods')],
+      ['Freight+Ins (€)', g('freight')],
+      ['HS (4)', g('hs')],
+      ['Clearance (€)', g('clearance')],
+      ['Units', g('units')],
+    ];
+    const csv = 'Field,Value\n' + lines.map(r=>r.join(',')).join('\n');
+    const blob = new Blob([csv], {type:'text/csv'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'landed-cost-inputs.csv';
+    a.click();
+  });
+</script>
