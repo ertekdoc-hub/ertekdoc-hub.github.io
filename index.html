@@ -3,220 +3,145 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bosforpack — Tourist Toolkit (eSIM • Car Rental • Hotels)</title>
-<meta name="description" content="Instant eSIM for Turkey, airport car rentals and hotel search — transparent comparisons, no extra cost. Istanbul-based support 09:00–22:00.">
-<meta name="theme-color" content="#0b1320">
-<meta property="og:title" content="Bosforpack — Tourist Toolkit (eSIM • Car Rental • Hotels)">
-<meta property="og:description" content="Instant eSIM, airport car hire and hotel search. Transparent, simple, no extra cost.">
-<meta property="og:url" content="https://bosforpack.com/">
-<meta name="twitter:card" content="summary_large_image">
+<title>Bosforpack — Tourist Toolkit (Hotels • eSIM • Car Rental)</title>
+<meta name="description" content="Hotels via trusted partners, plus eSIM and car rental guidance. Transparent, fast, Istanbul-based.">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="Bosforpack — Tourist Toolkit">
+<meta property="og:description" content="Hotels via trusted partners, plus eSIM and car rental guidance.">
 <style>
   :root{
-    --bg:#0b1320; --card:#111826; --border:#1f2a3b; --txt:#e8eef5; --muted:#9fb0c3;
-    --accent:#21c48d; --accent-2:#2ea8ff; --danger:#ef4444; --ok:#22c55e;
-    --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.28)
+    --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --muted:#475569;
+    --line:#e2e8f0; --accent:#2563eb; --accent2:#16a34a; --warn:#64748b;
+    --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.06)
   }
   *{box-sizing:border-box}
-  html,body{margin:0;height:100%}
-  body{background:var(--bg);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
   a{color:inherit}
   .wrap{max-width:1100px;margin:0 auto;padding:20px}
-  /* topbar */
-  .top{display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:14px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
-  .brand .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(33,196,141,.18)}
-  .nav{display:flex;gap:10px;flex-wrap:wrap}
-  .nav a{padding:8px 12px;border-radius:999px;text-decoration:none;background:#0f1a2b;border:1px solid #142339}
-  .nav a:hover{background:#13243a}
+  /* nav */
+  .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0}
+  .brand{font-weight:800;letter-spacing:.2px}
+  .nav{display:flex;gap:8px;flex-wrap:wrap}
+  .nav a{padding:8px 12px;border-radius:999px;text-decoration:none;border:1px solid var(--line);background:#fff}
+  .nav a:hover{border-color:#cbd5e1}
   /* hero */
-  .hero{background:linear-gradient(180deg,#0f1a2b 0%, #0b1320 100%);border:1px solid var(--border);
-        border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:18px}
-  .hero h1{font-size:30px;line-height:1.15;margin:0 0 8px}
-  .hero p{margin:0;color:var(--muted)}
+  .hero{background:linear-gradient(180deg,#ffffff 0%, #f5f7fb 100%); border:1px solid var(--line);
+        border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); margin:14px 0}
+  .hero h1{margin:0 0 6px; font-size:28px; line-height:1.2}
+  .hero p{margin:0; color:var(--muted)}
   .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 14px;border-radius:12px;
-       text-decoration:none;font-weight:700;border:1px solid #1c2c44}
-  .btn.primary{background:var(--accent);color:#022;box-shadow:0 2px 0 #0a3}
-  .btn.secondary{background:var(--accent-2);color:#012}
-  .btn.ghost{background:#0f1a2b;color:#cfe6ff}
-  .tag{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;color:#052; background:#b7f5d9}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border-radius:12px;text-decoration:none;font-weight:700}
+  .btn.primary{background:var(--accent);color:#fff;border:1px solid #1e40af}
+  .btn.secondary{background:var(--accent2);color:#fff;border:1px solid #0f7a2a}
+  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn.disabled{background:#f1f5f9;color:#94a3b8;border:1px solid var(--line);cursor:not-allowed}
   /* trust */
-  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
   @media (max-width:900px){.trust{grid-template-columns:repeat(2,1fr)}}
-  .tcard{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px}
-  .tcard b{display:block;margin-bottom:4px}
+  .tcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--muted)}
+  .tcard b{color:var(--ink)}
   /* grid */
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   @media (max-width:900px){.grid{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
   .card h3{margin:0 0 6px}
   .card p{margin:0 0 10px;color:var(--muted)}
   .card ul{margin:6px 0 0 18px;color:var(--muted)}
-  .card .btn{margin-top:8px}
-  /* faq */
-  .section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-top:14px}
-  details{background:#0f1a2b;border:1px solid #162741;border-radius:12px;margin:8px 0;padding:10px}
+  .note{font-size:13px;color:var(--muted)}
+  /* section */
+  .section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
+  details{background:#fff;border:1px solid var(--line);border-radius:12px;margin:8px 0;padding:10px}
   summary{cursor:pointer;font-weight:700}
-  footer{color:var(--muted);font-size:13px;text-align:center;margin:26px 0 10px}
-  .disclosure{color:#a5b8cc;font-size:12px;margin-top:10px}
-  .mini{font-size:12px;color:#9fb0c3}
-  .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media (max-width:900px){.row{grid-template-columns:1fr}}
-  .ok{color:#a7f3d0}
-  .shield{display:inline-flex;align-items:center;gap:6px}
+  footer{color:var(--muted);font-size:13px;text-align:center;margin:24px 0 10px}
 </style>
 </head>
 <body>
   <div class="wrap">
 
-    <!-- TOP -->
+    <!-- NAV -->
     <div class="top">
-      <div class="brand"><span class="dot"></span> Bosforpack</div>
+      <div class="brand">Bosforpack</div>
       <nav class="nav">
-        <a href="/esim/turkey.html">eSIM</a>
-        <a href="/cars/istanbul-airport.html">Car rental</a>
-        <a href="/hotels/istanbul.html">Hotels</a>
-        <a href="#faq">FAQ</a>
+        <!-- Hotels aktif: Trip.com affiliate linkini buraya yapıştır -->
+        <a href="https://www.trip.com/?Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5312785
+          "_blank" rel="nofollow sponsored">Hotels</a>
+        <!-- eSIM & Car Rental şimdilik pasif -->
+        <a class="btn disabled" title="Coming soon">eSIM (soon)</a>
+        <a class="btn disabled" title="Coming soon">Car Rental (soon)</a>
         <a href="mailto:cihan@bosforpack.com">Contact</a>
       </nav>
     </div>
 
     <!-- HERO -->
     <header class="hero">
-      <span class="tag">Tourist Toolkit</span>
-      <h1>Instant eSIM, airport car rentals & hotel search — in one simple place</h1>
-      <p>Istanbul-based guidance (09:00–22:00 TRT). Transparent comparisons, no extra cost to you.</p>
+      <h1>Plan your trip in one place</h1>
+      <p>Fast hotel search via trusted partners. eSIM and airport car rental coming soon. Istanbul-based support 09:00–22:00 (TRT).</p>
       <div class="cta">
-        <a class="btn primary" href="/esim/turkey.html">Get eSIM for Turkey</a>
-        <a class="btn secondary" href="/cars/istanbul-airport.html">Book car at IST/SAW</a>
-        <a class="btn ghost" href="/hotels/istanbul.html">Find Istanbul hotels</a>
+        <a class="btn primary" href="https://www.trip.com/?Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5312785"_blank" rel="nofollow sponsored">Find Hotels (Trip.com)</a>
         <a class="btn ghost" href="https://wa.me/905325211446" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </header>
 
-    <!-- TRUST STRIP -->
+    <!-- TRUST -->
     <section class="trust" aria-label="Trust & Safety">
-      <div class="tcard"><b>Transparent</b> We compare leading providers and link you directly. No hidden fees.</div>
-      <div class="tcard"><b>Secure</b> <span class="shield">🔒</span> We don’t collect payment—checkout happens on partners’ secure pages.</div>
-      <div class="tcard"><b>Istanbul-based</b> Local time support window: <b>09:00–22:00</b> (TRT).</div>
-      <div class="tcard"><b>Privacy-light</b> No accounts required. We only track outbound clicks to improve choices.</div>
+      <div class="tcard"><b>Transparent</b><br>We compare & link to partners directly. No hidden fees from us.</div>
+      <div class="tcard"><b>Secure checkout</b><br>All payments happen on partners’ encrypted pages.</div>
+      <div class="tcard"><b>Istanbul-based</b><br>Local time support window: 09:00–22:00 (TRT).</div>
+      <div class="tcard"><b>No extra cost</b><br>You pay the same price on the partner site.</div>
     </section>
 
-    <!-- THREE CARDS -->
+    <!-- SERVICES -->
     <section class="grid" aria-label="Services">
       <article class="card">
-        <h3>eSIM for Turkey</h3>
-        <p>Instant QR. iPhone/Android compatible. Install before you land.</p>
+        <h3>Hotels</h3>
+        <p>Quick picks for Istanbul. Filter by late check-in, map view, flexible rates.</p>
         <ul>
-          <li>5–20 GB or unlimited (FUP)</li>
-          <li>Keep your WhatsApp number (data-only)</li>
-          <li>1-minute setup</li>
+          <li>Trusted partner platform (reviews, maps)</li>
+          <li>Free cancellation options</li>
+          <li>No extra fees by us</li>
         </ul>
-        <a class="btn primary" href="/esim/turkey.html">Compare eSIM plans</a>
+        <p><a class="btn secondary" href="https://www.trip.com/?Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5312785" target="_blank" rel="nofollow sponsored">Open Trip.com</a></p>
+        <p class="note">Affiliate disclosure: We may earn a commission. Your price does not change.</p>
       </article>
 
       <article class="card">
-        <h3>Airport car rental</h3>
-        <p>Search IST/SAW/AYT — compare suppliers and book in minutes.</p>
+        <h3>eSIM (coming soon)</h3>
+        <p>Instant QR for mobile data. iPhone/Android compatible.</p>
+        <ul>
+          <li>5–20 GB and unlimited (FUP)</li>
+          <li>1-minute setup before you land</li>
+        </ul>
+        <p><span class="btn disabled">Coming soon</span></p>
+      </article>
+
+      <article class="card">
+        <h3>Airport Car Rental (coming soon)</h3>
+        <p>Compare IST/SAW suppliers, pay now or at counter.</p>
         <ul>
           <li>Free cancellation options</li>
-          <li>Pay-now or pay-at-counter choices</li>
-          <li>Trusted global brokers</li>
+          <li>Transparent fuel & deposit policies</li>
         </ul>
-        <a class="btn secondary" href="/cars/istanbul-airport.html">Search cars</a>
+        <p><span class="btn disabled">Coming soon</span></p>
       </article>
-
-      <article class="card">
-        <h3>Hotels in Istanbul</h3>
-        <p>Late check-in near IST, Old Town stays, Bosphorus views—pick easily.</p>
-        <ul>
-          <li>Partner platforms with reviews</li>
-          <li>Map & flexible rates</li>
-          <li>No extra fees from us</li>
-        </ul>
-        <a class="btn ghost" href="/hotels/istanbul.html">Search hotels</a>
-      </article>
-    </section>
-
-    <!-- WHY US / ABOUT -->
-    <section class="section">
-      <div class="row">
-        <div>
-          <h3>Why choose Bosforpack?</h3>
-          <ul>
-            <li><b>Decision-ready info:</b> short comparisons, clear “which to choose” notes.</li>
-            <li><b>No upsells:</b> same price as partners; we may earn a commission.</li>
-            <li><b>Local context:</b> Istanbul-based guidance for visitors.</li>
-            <li><b>Lightweight:</b> fast pages, no sign-up, no spam.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>About</h3>
-          <p>Bosforpack helps visitors set up essentials quickly: mobile data, transport and stays. We’re a small Istanbul-based team focused on clarity and trust.</p>
-          <p class="mini">Need help? <a href="mailto:cihan@bosforpack.com">cihan@bosforpack.com</a> • WhatsApp: <a href="https://wa.me/905325211446" target="_blank" rel="noopener">+90 532 521 1446</a></p>
-        </div>
-      </div>
-      <p class="disclosure">Affiliate disclosure: If you purchase through our links, we may earn a commission. Your price does not change.</p>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section">
+    <section class="section" id="faq">
       <h3>FAQ</h3>
-      <details><summary>Is this a travel agency?</summary>
-        <p>No. We don’t sell or fulfil bookings. We compare options and link you to trusted providers where checkout happens securely.</p>
+      <details><summary>Are you a travel agency?</summary>
+        <p>No. We don’t sell or fulfil bookings. We link you to trusted partners where checkout happens securely.</p>
       </details>
       <details><summary>Do I pay extra here?</summary>
-        <p>No. You pay the same price on the partner site. We may receive a commission from partners.</p>
+        <p>No. Prices are the same on the partner’s site. We may receive a commission.</p>
       </details>
       <details><summary>Support hours</summary>
-        <p>09:00–22:00 (TRT). We answer quick questions about choices; booking changes are handled by the partner you booked with.</p>
-      </details>
-      <details><summary>Türkçe desteğiniz var mı?</summary>
-        <p>Evet. Sorularınızı Türkçe yazabilirsiniz; yanıtları Türkçe de verebiliriz.</p>
+        <p>09:00–22:00 (TRT). Booking changes are handled by the partner you booked with.</p>
       </details>
     </section>
 
     <footer>
-      <div>© Bosforpack • Istanbul • Last updated: 10 Sep 2025</div>
-      <div class="mini">Privacy: No accounts. Minimal click analytics only. | <a href="/packaging/">Packaging archive</a></div>
+      © Bosforpack • Istanbul • Last updated: 10 Sep 2025
     </footer>
   </div>
-
-  <!-- JSON-LD: Organization & FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Bosforpack",
-    "url":"https://bosforpack.com",
-    "contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"cihan@bosforpack.com","telephone":"+90-532-521-1446","areaServed":"TR"}]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Is this a travel agency?","acceptedAnswer":{"@type":"Answer","text":"No. We don’t sell or fulfil bookings. We compare options and link you to trusted providers where checkout happens securely."}},
-      {"@type":"Question","name":"Do I pay extra here?","acceptedAnswer":{"@type":"Answer","text":"No. You pay the same price on the partner site. We may receive a commission from partners."}},
-      {"@type":"Question","name":"Support hours","acceptedAnswer":{"@type":"Answer","text":"09:00–22:00 (TRT). Quick questions here; booking changes are handled by the partner you booked with."}}
-    ]
-  }
-  </script>
 </body>
-  <!-- TripStarter top bar -->
-<div class="ann">
-  <strong>New:</strong>
-  <a href="https://www.trip.com/?Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5312785" target="_blank" rel="nofollow sponsored">Hotels</a> ·
-  <a href="/tripstarter/#esim">eSIM</a> ·
-  <a href="/tripstarter/#transfer">Transfer</a> ·
-  <a href="/tripstarter/#tickets">Tickets</a> ·
-  <a href="/tripstarter/#map">Safe Map</a>
-</div>
-<style>
-  .ann{background:#f6fdf6;padding:8px 12px;border-bottom:1px solid #dfeee0;
-       font:600 14px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-  .ann a{margin:0 6px;text-decoration:none}
-  .ann a:hover{text-decoration:underline}
-</style>
 </html>
