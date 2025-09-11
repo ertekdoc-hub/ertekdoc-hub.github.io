@@ -1,146 +1,117 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bosforpack — Tourist Toolkit (Hotels • eSIM • Car Rental)</title>
-<meta name="description" content="Hotels via trusted partners, plus eSIM and car rental guidance. Transparent, fast, Istanbul-based.">
-<meta name="theme-color" content="#ffffff">
-<meta property="og:title" content="Bosforpack — Tourist Toolkit">
-<meta property="og:description" content="Hotels via trusted partners, plus eSIM and car rental guidance.">
-<style>
-  :root{
-    --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --muted:#475569;
-    --line:#e2e8f0; --accent:#2563eb; --accent2:#16a34a; --warn:#64748b;
-    --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.06)
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-  a{color:inherit}
-  .wrap{max-width:1100px;margin:0 auto;padding:20px}
-  /* nav */
-  .top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:6px 0}
-  .brand{font-weight:800;letter-spacing:.2px}
-  .nav{display:flex;gap:8px;flex-wrap:wrap}
-  .nav a{padding:8px 12px;border-radius:999px;text-decoration:none;border:1px solid var(--line);background:#fff}
-  .nav a:hover{border-color:#cbd5e1}
-  /* hero */
-  .hero{background:linear-gradient(180deg,#ffffff 0%, #f5f7fb 100%); border:1px solid var(--line);
-        border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); margin:14px 0}
-  .hero h1{margin:0 0 6px; font-size:28px; line-height:1.2}
-  .hero p{margin:0; color:var(--muted)}
-  .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border-radius:12px;text-decoration:none;font-weight:700}
-  .btn.primary{background:var(--accent);color:#fff;border:1px solid #1e40af}
-  .btn.secondary{background:var(--accent2);color:#fff;border:1px solid #0f7a2a}
-  .btn.ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
-  .btn.disabled{background:#f1f5f9;color:#94a3b8;border:1px solid var(--line);cursor:not-allowed}
-  /* trust */
-  .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
-  @media (max-width:900px){.trust{grid-template-columns:repeat(2,1fr)}}
-  .tcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--muted)}
-  .tcard b{color:var(--ink)}
-  /* grid */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  @media (max-width:900px){.grid{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-  .card h3{margin:0 0 6px}
-  .card p{margin:0 0 10px;color:var(--muted)}
-  .card ul{margin:6px 0 0 18px;color:var(--muted)}
-  .note{font-size:13px;color:var(--muted)}
-  /* section */
-  .section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:14px}
-  details{background:#fff;border:1px solid var(--line);border-radius:12px;margin:8px 0;padding:10px}
-  summary{cursor:pointer;font-weight:700}
-  footer{color:var(--muted);font-size:13px;text-align:center;margin:24px 0 10px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bosforpack — EPR & Landed-Cost Araçları</title>
+  <meta name="description" content="Türkiye'den AB/UK'e satış yapanlar için pratik EPR (ambalaj sorumluluğu) ve Landed-Cost hesaplama araçları.">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="canonical" href="https://bosforpack.com/">
+  <style>
+    :root{
+      --bg:#0e1116; --paper:#131823; --muted:#9fb0c5; --text:#eaf2ff; --brand:#22c55e; --brand-d:#16a34a;
+      --card:#0f1520; --stroke:#1f2a3a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1040px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{font-weight:800;letter-spacing:.6px}
+    nav a{margin:0 12px;color:var(--muted)}
+    nav a:hover{color:#fff}
+    .hero{background:linear-gradient(180deg,rgba(255,255,255,.04),transparent);border:1px solid var(--stroke);border-radius:14px;padding:32px;margin-top:16px}
+    h1{font-size:38px;line-height:1.15;margin:0 0 14px}
+    .sub{color:var(--muted);max-width:760px}
+    .row{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}
+    .btn{background:#303a4b;border:1px solid var(--stroke);color:#fff;padding:12px 16px;border-radius:10px;font-weight:600}
+    .btn:hover{filter:brightness(1.08)}
+    .btn.primary{background:var(--brand);border-color:var(--brand-d);color:#06210e}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:28px}
+    .card{grid-column:span 6;background:var(--card);border:1px solid var(--stroke);border-radius:14px;padding:20px}
+    .card h3{margin:0 0 8px}
+    .card p{color:var(--muted);margin:0 0 12px}
+    ul.check{margin:8px 0 16px 18px}
+    ul.check li{margin:6px 0}
+    .pill{display:inline-block;font-size:12px;border:1px solid var(--stroke);padding:6px 8px;border-radius:999px;color:var(--muted);margin-right:8px}
+    footer{margin:40px 0 24px;color:var(--muted);font-size:14px}
+    @media(max-width:820px){
+      .card{grid-column:span 12}
+      h1{font-size:30px}
+      nav{display:none}
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-
-    <!-- NAV -->
-    <div class="top">
-      <div class="brand">Bosforpack</div>
-      <nav class="nav">
-        <!-- Hotels aktif:https://www.trip.com/hotels/list?city=532&cityName=Istanbul Province, Türkiye&provinceId=100573&countryId=89&checkIn=2025-09-10&checkOut=2025-09-11&lat=-1&lon=-1&districtId=0&barCurr=USD&searchType=CT&searchWord=Istanbul&searchValue=19|532*19*532*1&searchCoordinate=BAIDU_-1_-1_0|GAODE_-1_-1_0|GOOGLE_-1_-1_0|NORMAL_41.00527_28.97696_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5313233
-        <a href="https://www.trip.com/hotels/list?city=532&cityName=Istanbul Province, Türkiye&provinceId=100573&countryId=89&checkIn=2025-09-10&checkOut=2025-09-11&lat=-1&lon=-1&districtId=0&barCurr=USD&searchType=CT&searchWord=Istanbul&searchValue=19|532*19*532*1&searchCoordinate=BAIDU_-1_-1_0|GAODE_-1_-1_0|GOOGLE_-1_-1_0|NORMAL_41.00527_28.97696_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5313233
-          "_blank" rel="nofollow sponsored">Hotels</a>
-        <!-- eSIM & Car Rental şimdilik pasif -->
-        <a class="btn disabled" title="Coming soon">eSIM (soon)</a>
-        <a class="btn disabled" title="Coming soon">Car Rental (soon)</a>
-        <a href="mailto:cihan@bosforpack.com">Contact</a>
+  <div class="container">
+    <header>
+      <div class="logo">BOSFORPACK</div>
+      <nav>
+        <a href="#epr">EPR</a>
+        <a href="/tools/landed-cost.html">Landed-Cost</a>
+        <a href="#faq">SSS</a>
+        <a href="mailto:cihan@bosforpack.com">İletişim</a>
       </nav>
-    </div>
-
-    <!-- HERO -->
-    <header class="hero">
-      <h1>Plan your trip in one place</h1>
-      <p>Fast hotel search via trusted partners. eSIM and airport car rental coming soon. Istanbul-based support 09:00–22:00 (TRT).</p>
-      <div class="cta">
-        <a class="btn primary" href="hhttps://www.trip.com/hotels/list?city=532&cityName=Istanbul Province, Türkiye&provinceId=100573&countryId=89&checkIn=2025-09-10&checkOut=2025-09-11&lat=-1&lon=-1&districtId=0&barCurr=USD&searchType=CT&searchWord=Istanbul&searchValue=19|532*19*532*1&searchCoordinate=BAIDU_-1_-1_0|GAODE_-1_-1_0|GOOGLE_-1_-1_0|NORMAL_41.00527_28.97696_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5313233"_blank" rel="nofollow sponsored">Find Hotels (Trip.com)</a>
-        <a class="btn ghost" href="https://wa.me/905325211446" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
     </header>
 
-    <!-- TRUST -->
-    <section class="trust" aria-label="Trust & Safety">
-      <div class="tcard"><b>Transparent</b><br>We compare & link to partners directly. No hidden fees from us.</div>
-      <div class="tcard"><b>Secure checkout</b><br>All payments happen on partners’ encrypted pages.</div>
-      <div class="tcard"><b>Istanbul-based</b><br>Local time support window: 09:00–22:00 (TRT).</div>
-      <div class="tcard"><b>No extra cost</b><br>You pay the same price on the partner site.</div>
+    <section class="hero">
+      <div class="pill">Made in Türkiye</div>
+      <div class="pill">GDPR dostu • çerez yok</div>
+      <h1>AB/UK’e satış yapanlar için<br> pratik <u>EPR</u> & <u>Landed-Cost</u> araçları</h1>
+      <p class="sub">İhracatçıların günlük işini kolaylaştıran, yalın ve hızlı araçlar: ambalaj sorumluluğu (EPR) kontrol listeleri ve CIF bileşenleriyle yaklaşık gümrük/vergiyi veren landed-cost hesaplayıcı.</p>
+      <div class="row">
+        <a class="btn primary" href="/downloads/EPR_Lite.xlsx" download>⬇ EPR Lite (Ücretsiz XLSX)</a>
+        <a class="btn" href="/tools/landed-cost.html">📊 Landed-Cost Hesaplayıcı</a>
+      </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="grid" aria-label="Services">
-      <article class="card">
-        <h3>Hotels</h3>
-        <p>Quick picks for Istanbul. Filter by late check-in, map view, flexible rates.</p>
-        <ul>
-          <li>Trusted partner platform (reviews, maps)</li>
-          <li>Free cancellation options</li>
-          <li>No extra fees by us</li>
+    <section id="epr" class="grid">
+      <div class="card">
+        <h3>EPR Lite — ücretsiz</h3>
+        <p>AB piyasaya sürülen ürünler için temel ambalaj sorumluluklarını kontrol edin.</p>
+        <ul class="check">
+          <li>Ülke bazlı kısa notlar (genel)</li>
+          <li>Ürün/ambalaj tipine göre işaretleme alanı</li>
+          <li>İç kullanım için indirilebilir XLSX</li>
         </ul>
-        <p><a class="btn secondary" href="https://www.trip.com/hotels/list?city=532&cityName=Istanbul Province, Türkiye&provinceId=100573&countryId=89&checkIn=2025-09-10&checkOut=2025-09-11&lat=-1&lon=-1&districtId=0&barCurr=USD&searchType=CT&searchWord=Istanbul&searchValue=19|532*19*532*1&searchCoordinate=BAIDU_-1_-1_0|GAODE_-1_-1_0|GOOGLE_-1_-1_0|NORMAL_41.00527_28.97696_0&crn=1&adult=2&children=0&searchBoxArg=t&ctm_ref=ix_sb_dl&travelPurpose=0&domestic=false&Allianceid=7061419&SID=258403566&trip_sub1=&trip_sub3=D5313233" target="_blank" rel="nofollow sponsored">Open Trip.com</a></p>
-        <p class="note">Affiliate disclosure: We may earn a commission. Your price does not change.</p>
-      </article>
+        <a class="btn primary" href="/downloads/EPR_Lite.xlsx" download>İndir (XLSX)</a>
+      </div>
 
-      <article class="card">
-        <h3>eSIM (coming soon)</h3>
-        <p>Instant QR for mobile data. iPhone/Android compatible.</p>
-        <ul>
-          <li>5–20 GB and unlimited (FUP)</li>
-          <li>1-minute setup before you land</li>
+      <div class="card">
+        <h3>EPR Pro — yakında</h3>
+        <p>Daha detaylı ülke gereklilikleri, hızlı checklist ve çıktılar.</p>
+        <ul class="check">
+          <li>Ülke-özel notlar & güncellemeler</li>
+          <li>Checklist → PDF çıktısı</li>
+          <li>Öncelikli destek</li>
         </ul>
-        <p><span class="btn disabled">Coming soon</span></p>
-      </article>
-
-      <article class="card">
-        <h3>Airport Car Rental (coming soon)</h3>
-        <p>Compare IST/SAW suppliers, pay now or at counter.</p>
-        <ul>
-          <li>Free cancellation options</li>
-          <li>Transparent fuel & deposit policies</li>
-        </ul>
-        <p><span class="btn disabled">Coming soon</span></p>
-      </article>
+        <!-- Lemon Squeezy ödeme linkini hazır olunca bu href’e ekle -->
+        <a class="btn" href="#" onclick="alert('Yakında yayında.'); return false;">Erken erişim talebi</a>
+      </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <h3>FAQ</h3>
-      <details><summary>Are you a travel agency?</summary>
-        <p>No. We don’t sell or fulfil bookings. We link you to trusted partners where checkout happens securely.</p>
-      </details>
-      <details><summary>Do I pay extra here?</summary>
-        <p>No. Prices are the same on the partner’s site. We may receive a commission.</p>
-      </details>
-      <details><summary>Support hours</summary>
-        <p>09:00–22:00 (TRT). Booking changes are handled by the partner you booked with.</p>
-      </details>
+    <section class="grid">
+      <div class="card">
+        <h3>Landed-Cost Hesaplayıcı</h3>
+        <p>CIF bileşenleriyle yaklaşık gümrük + KDV’yi hesaplayın. Hızlı, basit, ücretsiz.</p>
+        <ul class="check">
+          <li>HS ilk 4 hane ile sık kullanılan oranlar</li>
+          <li>Destinasyona göre KDV ön ayarı</li>
+          <li>Tarayıcıda çalışır; veri tutmayız</li>
+        </ul>
+        <a class="btn" href="/tools/landed-cost.html">Hesapla</a>
+      </div>
+
+      <div class="card" id="faq">
+        <h3>SSS (kısa)</h3>
+        <p><b>EPR nedir?</b> AB’de üretici/ithalatçının ambalaj atık sorumluluklarını yerine getirmesi gerekliliği.</p>
+        <p><b>Hesaplayıcı doğruluk garantisi?</b> Hayır. Gösterge amaçlıdır; gümrük/broker doğrulaması gerekir.</p>
+        <p><b>Veri güvenliği?</b> Çerez yok, form yok; her şey tarayıcı içinde.</p>
+      </div>
     </section>
 
     <footer>
-      © Bosforpack • Istanbul • Last updated: 10 Sep 2025
+      © Bosforpack • İstanbul • <a href="mailto:cihan@bosforpack.com">cihan@bosforpack.com</a>
     </footer>
   </div>
 </body>
