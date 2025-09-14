@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TrustGrid — Independent clinic/quote report in 24 hours (Rhinoplasty) · Bosforpack</title>
-<meta name="description" content="Independent verification more reliable than comments: licensing/accreditation checks, package & price audit, and two alternative quotes. Delivered in 24 hours. Basic $99 • Standard $199 • Premium $499.">
+<meta name="description" content="Independent verification for rhinoplasty: licensing & accreditation checks, package & price audit, and two alternative quotes. One-page report with citations in 24 hours.">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="TrustGrid — 24h independent clinic report">
 <meta property="og:description" content="Verification + price audit + 2 alternatives. Delivered in 24 hours.">
@@ -17,10 +17,11 @@ html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto
 .header{display:flex;align-items:center;justify-content:space-between;margin:8px 0 16px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px}
 .small{color:#b8c9c6;font-size:13px}
-.badge{padding:4px 8px;border:1px solid #1a3c4f;border-radius:999px;color:var(--muted);font-size:12px}
+.badge{padding:8px 12px;border:1px solid #1a3c4f;border-radius:999px;color:#eaf3f1;background:#0d3546;font-size:16px;font-weight:700;letter-spacing:.02em;display:inline-flex;align-items:center;gap:8px}
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin-top:24px}
 .hero .card{background:var(--card);border:1px solid #17384a;border-radius:16px;box-shadow:0 10px 30px var(--shadow);padding:20px}
-h1{font-size:36px;margin:0 0 12px;line-height:1.15}
+h1{font-size:36px;margin:8px 0 8px;line-height:1.12}
+.subtitle{font-size:22px;color:#cde1dd;margin:8px 0 16px}
 p.lead{color:#cde1dd;font-size:18px;margin:0 0 16px}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
 .btn{appearance:none;border:none;border-radius:12px;padding:12px 16px;background:var(--accent);color:#052026;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
@@ -30,36 +31,26 @@ p.lead{color:#cde1dd;font-size:18px;margin:0 0 16px}
 .card h3{margin:.2rem 0 .4rem;font-size:18px}
 .kicker{color:#89d5c7;text-transform:uppercase;letter-spacing:.08em;font-weight:700;font-size:12px}
 .price{font-size:28px;font-weight:800;color:#a7f3e3;margin:.3rem 0}
-.list{margin:8px 0 0;padding-left:18px}
-.list li{margin:.3rem 0}
-.faq{margin-top:30px}
-.faq h2{margin:0 0 10px}
+.list{margin:8px 0 0;padding-left:18px} .list li{margin:.3rem 0}
+.faq{margin-top:30px} .faq h2{margin:0 0 10px}
 .faq details{background:var(--card);border:1px solid #17384a;border-radius:12px;padding:12px;margin:8px 0}
 .footer{margin:32px 0 24px;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;color:#9fb2b0}
 .toggle{font-size:12px;color:#9ccfc4;cursor:pointer}
-@media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}
+.gallery img{width:100%;height:260px;object-fit:cover;border-radius:14px;border:1px solid #17384a;box-shadow:0 8px 20px var(--shadow)}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}}
+.note{color:#b8c9c6;font-size:12px;margin-top:6px}
 </style>
 <script>
-function setLang(l){document.documentElement.setAttribute('lang',l);
+function setLang(l){
+  document.documentElement.setAttribute('lang',l);
   for(const el of document.querySelectorAll('[data-tr],[data-en]')){
     el.textContent = el.getAttribute(l==='tr'?'data-tr':'data-en');
   }
 }
 </script>
 <script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"Service",
- "name":"TrustGrid Patient Check (Rhinoplasty)",
- "provider":{"@type":"Organization","name":"Bosforpack"},
- "areaServed":"EU/UK/DE",
- "description":"Independent verification of clinics and quotes in 24h with citations and two alternatives.",
- "offers":[
-  {"@type":"Offer","name":"Basic","price":"99","priceCurrency":"USD"},
-  {"@type":"Offer","name":"Standard","price":"199","priceCurrency":"USD"},
-  {"@type":"Offer","name":"Premium","price":"499","priceCurrency":"USD"}
- ]
-}
+{"@context":"https://schema.org","@type":"Service","name":"TrustGrid Patient Check (Rhinoplasty)","provider":{"@type":"Organization","name":"Bosforpack"},"areaServed":"EU/UK/DE","description":"Independent verification of clinics and quotes in 24h with citations and two alternatives.","offers":[{"@type":"Offer","name":"Basic","price":"99","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"199","priceCurrency":"USD"},{"@type":"Offer","name":"Premium","price":"499","priceCurrency":"USD"}]}
 </script>
 </head>
 <body>
@@ -74,53 +65,44 @@ function setLang(l){document.documentElement.setAttribute('lang',l);
 
   <section class="hero">
     <div>
-      <div class="badge" data-en="Rhinoplasty (pilot)" data-tr="Rinoplasti (pilot dikey)">Rhinoplasty (pilot)</div>
+      <div class="badge" data-en="Rhinoplasty (nose job) — pilot" data-tr="Burun estetiği (rinoplasti) — pilot">Rhinoplasty (nose job) — pilot</div>
       <h1 data-en="More reliable than comments — independent clinic/quote report in 24 hours."
-          data-tr="Instagram yorumundan daha güvenilir — 24 saatte bağımsız klinik/teklif raporu.">
-        More reliable than comments — independent clinic/quote report in 24 hours.
-      </h1>
-      <p class="lead" data-en="Licensing & accreditation checks, package & price audit, and two alternative quotes — one page with citations."
-                     data-tr="Lisans/akreditasyon kontrolü, paket & fiyat denetimi ve 2 alternatif teklif — kanıtlı tek sayfa.">
-        Licensing & accreditation checks, package & price audit, and two alternative quotes — one page with citations.
-      </p>
+          data-tr="Yorumlardan daha güvenilir — 24 saatte bağımsız klinik/teklif raporu.">More reliable than comments — independent clinic/quote report in 24 hours.</h1>
+      <div class="subtitle" data-en="We check clinics and quotes for you. You get a one-page report with sources."
+           data-tr="Klinikleri ve teklifleri sizin için kontrol ederiz. Kaynaklı tek sayfa rapor alırsınız.">We check clinics and quotes for you. You get a one-page report with sources.</div>
+
       <div class="cta">
         <a class="btn" href="https://wa.me/905325211446?text=Hello%2C%20I%27d%20like%20to%20get%20a%20TrustGrid%20report.">Start on WhatsApp</a>
         <a class="btn ghost" href="#pricing" data-en="See Packages" data-tr="Paketleri Gör">See Packages</a>
+        <a class="btn ghost" href="sample.html" data-en="View sample report" data-tr="Örnek raporu görün">View sample report</a>
       </div>
 
-      <!-- TRUST STRIP -->
       <div class="card" style="margin-top:12px">
         <p class="small" data-en="Delivery: 24 hours • Refund: if an equal-or-safer clinic offers better total terms within 7 days."
-                           data-tr="Teslim: 24 saat • İade: eşit/ daha güvenli klinikten daha iyi toplam koşul sunulursa (7 gün).">
-          Delivery: 24 hours • Refund: if an equal-or-safer clinic offers better total terms within 7 days.
-        </p>
+                           data-tr="Teslim: 24 saat • İade: eşit/ daha güvenli klinikten daha iyi toplam koşul sunulursa (7 gün).">Delivery: 24 hours • Refund: if an equal-or-safer clinic offers better total terms within 7 days.</p>
         <p class="small" style="margin:.4rem 0 0" data-en="Secure checkout via Lemon Squeezy • Prices in USD (VAT included where applicable) • We never take clinic commissions."
-                                      data-tr="Lemon Squeezy ile güvenli ödeme • Fiyatlar USD (uyg. yerlerde KDV dahil) • Kliniklerden komisyon alınmaz.">
-          Secure checkout via Lemon Squeezy • Prices in USD (VAT included where applicable) • We never take clinic commissions.
-        </p>
-        <p class="small" style="margin:.6rem 0 0">
-          <a href="TrustGrid_Sample_Report_EN.html" style="color:#a7f3e3">View a sample report</a>
-        </p>
+                                      data-tr="Lemon Squeezy ile güvenli ödeme • Fiyatlar USD (uyg. yerlerde KDV dahil) • Kliniklerden komisyon alınmaz.">Secure checkout via Lemon Squeezy • Prices in USD (VAT included where applicable) • We never take clinic commissions.</p>
       </div>
+
       <p class="small" data-en="Not medical advice; independent verification and commercial terms audit."
-                       data-tr="Tıbbi tavsiye değildir; bağımsız doğrulama ve ticari koşul denetimidir.">
-        Not medical advice; independent verification and commercial terms audit.
-      </p>
+                       data-tr="Tıbbi tavsiye değildir; bağımsız doğrulama ve ticari koşul denetimidir.">Not medical advice; independent verification and commercial terms audit.</p>
+
+      <!-- SIMPLE GALLERY -->
+      <div class="gallery">
+        <img src="img/rhinoplasty-1.jpg" alt="Rhinoplasty illustrative photo 1">
+        <img src="img/rhinoplasty-2.jpg" alt="Rhinoplasty illustrative photo 2">
+      </div>
+      <div class="note" data-en="Illustrative photos. We do not publish patient identities." data-tr="Temsili fotoğraflar. Hasta kimliği yayınlanmaz.">Illustrative photos. We do not publish patient identities.</div>
     </div>
 
     <div class="card">
       <div class="kicker" data-en="How it works" data-tr="Nasıl çalışır?">How it works</div>
       <ol class="list">
-        <li data-en="Answer 5 questions on WhatsApp (send your quote screenshot if any)."
-            data-tr="WhatsApp’ta 5 soruya cevap verin (teklif ekran görüntüsü varsa gönderin)."></li>
-        <li data-en="We run a 20-criteria independent verification (licensing, accreditation, policies)."
-            data-tr="20 kriterli bağımsız doğrulama yaparız (lisans, akreditasyon, politikalar)."></li>
-        <li data-en="We normalize your quote and collect 2 alternatives (apples-to-apples)."
-            data-tr="Teklifinizi normalize eder, 2 alternatif toplarız (elma-elmaya)."></li>
-        <li data-en="One-page report in 24h (RAG heatmap + comparison table)."
-            data-tr="24 saatte tek sayfa rapor (RAG ısı haritası + karşılaştırma)."></li>
-        <li data-en="Refund if you find a better overall offer from an equal-or-safer clinic."
-            data-tr="Daha iyi toplam koşul sunan eşit/ daha güvenli klinik bulursanız iade."></li>
+        <li data-en="Answer 5 questions on WhatsApp (send your quote screenshot if any)." data-tr="WhatsApp’ta 5 soruya cevap verin (teklif ekran görüntüsü varsa gönderin)."></li>
+        <li data-en="We run a 20-criteria independent verification (licensing, accreditation, policies)." data-tr="20 kriterli bağımsız doğrulama yaparız (lisans, akreditasyon, politikalar)."></li>
+        <li data-en="We normalize your quote and collect 2 alternatives (apples-to-apples)." data-tr="Teklifinizi normalize eder, 2 alternatif toplarız (elma-elmaya)."></li>
+        <li data-en="One-page report in 24h (RAG heatmap + comparison table)." data-tr="24 saatte tek sayfa rapor (RAG ısı haritası + karşılaştırma)."></li>
+        <li data-en="Refund if you find a better overall offer from an equal-or-safer clinic." data-tr="Daha iyi toplam koşul sunan eşit/ daha güvenli klinik bulursanız iade."></li>
       </ol>
     </div>
   </section>
@@ -167,32 +149,25 @@ function setLang(l){document.documentElement.setAttribute('lang',l);
   <section class="faq">
     <h2 data-en="FAQ" data-tr="Sık Sorulanlar">FAQ</h2>
     <details><summary data-en="Is this medical advice?" data-tr="Bu tıbbi tavsiye mi?"></summary>
-      <p class="small" data-en="No. It’s a transparent summary of public & verified info; we normalize commercial terms."
-                       data-tr="Hayır. Kamuya açık ve doğrulanmış bilginin şeffaf özetidir; ticari koşulları normalize eder."></p>
+      <p class="small" data-en="No. It’s a transparent summary of public & verified info; we normalize commercial terms." data-tr="Hayır. Kamuya açık ve doğrulanmış bilginin şeffaf özetidir; ticari koşulları normalize eder."></p>
     </details>
     <details><summary data-en="Are you independent? Do you get paid by clinics?" data-tr="Tarafsız mısınız? Kliniklerden ücret alıyor musunuz?"></summary>
-      <p class="small" data-en="We work only for the patient. We never accept commissions, referral fees or gifts from clinics."
-                       data-tr="Sadece hasta için çalışırız. Kliniklerden komisyon, yönlendirme ücreti ya da hediye kabul etmeyiz."></p>
+      <p class="small" data-en="We work only for the patient. We never accept commissions, referral fees or gifts from clinics." data-tr="Sadece hasta için çalışırız. Kliniklerden komisyon, yönlendirme ücreti ya da hediye kabul etmeyiz."></p>
     </details>
     <details><summary data-en="How do payments work?" data-tr="Ödemeler nasıl işliyor?"></summary>
-      <p class="small" data-en="Card payments are processed by Lemon Squeezy on our behalf. You receive an instant receipt and we start within minutes."
-                       data-tr="Kart ödemeleri Lemon Squeezy tarafından bizim adımıza işlenir. Anında makbuz alırsınız ve dakikalar içinde başlarız."></p>
+      <p class="small" data-en="Card payments are processed by Lemon Squeezy on our behalf. You receive an instant receipt and we start within minutes." data-tr="Kart ödemeleri Lemon Squeezy tarafından bizim adımıza işlenir. Anında makbuz alırsınız ve dakikalar içinde başlarız."></p>
     </details>
     <details><summary data-en="How does the refund work?" data-tr="İade nasıl çalışır?"></summary>
-      <p class="small"><a href="/trustgrid/trustgrid_refund.txt" style="color:#a7f3e3" data-en="Read refund policy" data-tr="İade koşullarını okuyun">Read refund policy</a>.</p>
+      <p class="small"><a href="trustgrid/trustgrid_refund.txt" style="color:#a7f3e3" data-en="Read refund policy" data-tr="İade koşullarını okuyun">Read refund policy</a>.</p>
     </details>
     <details><summary data-en="Where do you get the data?" data-tr="Veriler nereden?"></summary>
-      <p class="small" data-en="MoH authorization lists, accreditation directories, clinic policies, written confirmations; social proof sampled per platform rules."
-                       data-tr="Yetki listeleri, akreditasyon dizinleri, politika sayfaları, yazılı teyit; sosyal kanıt örnekleri platform kurallarına uygundur."></p>
+      <p class="small" data-en="MoH authorization lists, accreditation directories, clinic policies, written confirmations; social proof sampled per platform rules." data-tr="Yetki listeleri, akreditasyon dizinleri, politika sayfaları, yazılı teyit; sosyal kanıt örnekleri platform kurallarına uygundur."></p>
     </details>
   </section>
 
   <div class="footer">
-    <div class="small">© TrustGrid · <a href="/trustgrid/trustgrid_privacy.txt" style="color:#9ccfc4" data-en="Privacy" data-tr="Gizlilik">Privacy</a> · <a href="/trustgrid/trustgrid_terms.txt" style="color:#9ccfc4" data-en="Terms" data-tr="Koşullar">Terms</a></div>
-    <div class="small" data-en="Operator: Bosforpack (TR) · Contact: hello@bosforpack.com · WhatsApp: +90 532 521 1446 · Data controller under GDPR. Request deletion anytime."
-                       data-tr="İşletmeci: Bosforpack (TR) · İletişim: hello@bosforpack.com · WhatsApp: +90 532 521 1446 · GDPR kapsamında veri sorumlusu. Silme talebi gönderebilirsiniz.">
-      Operator: Bosforpack (TR) · Contact: hello@bosforpack.com · WhatsApp: +90 532 521 1446 · Data controller under GDPR. Request deletion anytime.
-    </div>
+    <div class="small">© TrustGrid · <a href="trustgrid/trustgrid_privacy.txt" style="color:#9ccfc4" data-en="Privacy" data-tr="Gizlilik">Privacy</a> · <a href="trustgrid/trustgrid_terms.txt" style="color:#9ccfc4" data-en="Terms" data-tr="Koşullar">Terms</a></div>
+    <div class="small" data-en="Operator: Bosforpack (TR) · Contact: cihan@bosforpack.com · WhatsApp: +90 532 521 1446 · Data controller under GDPR. Request deletion anytime." data-tr="İşletmeci: Bosforpack (TR) · İletişim: cihan@bosforpack.com · WhatsApp: +90 532 521 1446 · GDPR kapsamında veri sorumlusu. Silme talebi gönderebilirsiniz.">Operator: Bosforpack (TR) · Contact: <a href="mailto:cihan@bosforpack.com">cihan@bosforpack.com</a> · WhatsApp: +90 532 521 1446 · Data controller under GDPR. Request deletion anytime.</div>
   </div>
 </div>
 
