@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Reviews — Bosphorus CLNC</title>
+  <meta name="description" content="Verified patient testimonials for Bosphorus CLNC. Rhinoplasty, dental, hair and breast surgery experiences from Europe.">
+  <style>
+    :root {
+      --blue: #0078b7;
+      --navy: #00394f;
+      --gray: #f7f9fb;
+      --font: 'Poppins', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: white; color: #222; line-height: 1.6; }
+    header { background: var(--navy); color: white; padding: 1.5rem; text-align: center; }
+    header h1 { font-size: 1.6rem; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    section { padding: 3rem 1rem; text-align: center; }
+    h2 { color: var(--navy); margin-bottom: 2rem; }
+    .reviews {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; max-width: 1000px; margin: 0 auto;
+    }
+    .review {
+      background: var(--gray); border-radius: 10px; padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: left;
+      transition: all .2s ease;
+    }
+    .review:hover { background: #eaf5fa; transform: translateY(-3px); }
+    .stars { color: gold; margin-bottom: .5rem; }
+    .name { font-weight: 600; color: var(--navy); margin-top: 1rem; }
+    .flag { font-size: 1.4rem; }
+    .cta {
+      margin-top: 3rem;
+    }
+    .cta a {
+      background: var(--blue); color: white; padding: 0.9rem 1.4rem; border-radius: 6px;
+      text-decoration: none; font-weight: 500;
+    }
+    footer {
+      background: var(--navy); color: white; text-align: center; padding: 2rem 1rem;
+      margin-top: 3rem; font-size: 0.9rem;
+    }
+    footer a { color: #fff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bosphorus CLNC</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Verified Patient Reviews</h2>
+    <p>All testimonials are verified through WhatsApp or email after the patient’s procedure. We share only authentic feedback.</p>
+
+    <div class="reviews">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“I flew from Berlin for rhinoplasty. Everything from the airport pickup to follow-up was smooth. The result is natural and exactly what I wanted.”</p>
+        <div class="name">Julia M. <span class="flag">🇩🇪</span></div>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Professional coordination and transparent communication. I did my All-on-4 dental implants — perfect experience.”</p>
+        <div class="name">Marie L. <span class="flag">🇫🇷</span></div>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“I was nervous about flying abroad, but the Bosphorus CLNC team made it so easy. I stayed in a clean hotel, and my hair transplant went flawlessly.”</p>
+        <div class="name">David R. <span class="flag">🇬🇧</span></div>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Friendly communication and clear prices. I recommend it to anyone considering surgery in Turkey.”</p>
+        <div class="name">Elena P. <span class="flag">🇮🇹</span></div>
+      </div>
+
+    </div>
+
+    <div class="cta">
+      <a href="https://wa.me/905325211446?text=Hi%2C%20I%27m%20interested%20in%20treatment%20options%20via%20Bosphorus%20CLNC." target="_blank">Get Your Quote</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Bosphorus CLNC. All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="about.html">About</a></p>
+  </footer>
+
+</body>
+</html>
