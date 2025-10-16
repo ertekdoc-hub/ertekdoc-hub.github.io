@@ -10,150 +10,78 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f5f7fa;
-    --ink:#111;
-    --muted:#666;
-    --brand:#1e73c7;
-    --accent:#25D366; /* WhatsApp green */
-    --border:#e6ebf0;
+    --bg:#f5f7fa; --ink:#0f2534; --muted:#5a6b7b; --brand:#1e73c7;
+    --accent:#25D366; --border:#e6ebf0; --surface:#ffffff;
+    --shadow:0 12px 28px rgba(16,36,51,.10); --rad:16px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:'Inter',system-ui,Arial,sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-    overflow-x:hidden;
-  }
+  body{font-family:'Inter',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);overflow-x:hidden}
 
   /* NAVBAR */
-  nav{
-    background:#fff;
-    border-bottom:1px solid var(--border);
-    position:sticky;
-    top:0;
-    z-index:50;
-  }
-  .nav-wrap{
-    max-width:1200px;
-    margin:auto;
-    padding:12px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:800;
-    font-size:20px;
-    color:var(--brand);
-  }
-  .logo svg{height:28px;width:auto;}
-  .menu a{
-    margin-left:20px;
-    font-weight:600;
-    color:#222;
-    text-decoration:none;
-  }
-  .menu a:hover{color:var(--brand);}
-  .cta{
-    background:var(--accent);
-    color:#fff;
-    padding:10px 16px;
-    border-radius:10px;
-    font-weight:700;
-  }
-  .cta:hover{filter:brightness(1.05);}
+  nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+  .nav-wrap{max-width:1200px;margin:auto;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+  .brand{display:flex;gap:10px;align-items:center;font-weight:800;font-size:20px;color:var(--brand)}
+  .brand svg{height:28px}
+  .menu a{margin-left:20px;font-weight:600;color:#1b2a36;text-decoration:none}
+  .menu a:hover{color:var(--brand)}
+  .menu .cta{background:var(--accent);color:#fff;padding:10px 16px;border-radius:12px;font-weight:800}
+  .menu .cta:hover{filter:brightness(1.05)}
 
   /* HERO */
-  .hero{
-    background:#7d8a91;
-    color:#fff;
-    text-align:center;
-    padding:90px 20px 70px;
-  }
-  .hero h1{
-    font-size:42px;
-    font-weight:800;
-    margin-bottom:14px;
-  }
-  .hero p{
-    font-size:17px;
-    color:#e9e9e9;
-    max-width:700px;
-    margin:0 auto 24px;
-  }
-  .hero .btn{
-    background:var(--accent);
-    color:#fff;
-    font-weight:700;
-    border:none;
-    border-radius:30px;
-    padding:16px 26px;
-    font-size:16px;
-    cursor:pointer;
-    box-shadow:0 6px 18px rgba(0,0,0,0.1);
-  }
-  .hero .btn:hover{filter:brightness(1.1);}
-  .badges{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:22px;
-  }
-  .badge{
-    background:rgba(255,255,255,0.15);
-    border:1px solid rgba(255,255,255,0.25);
-    color:#fff;
-    border-radius:20px;
-    padding:6px 14px;
-    font-size:13px;
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    gap:6px;
-  }
+  .hero{background:#7d8a91;color:#fff;text-align:center;padding:92px 20px 68px}
+  .hero h1{font-size:44px;font-weight:800;margin-bottom:14px}
+  .hero p{font-size:17px;color:#e9e9e9;max-width:740px;margin:0 auto 24px}
+  .hero .btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#fff;font-weight:800;
+             border:none;border-radius:999px;padding:16px 26px;font-size:16px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+  .hero .btn:hover{filter:brightness(1.09)}
+  .badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;
+         padding:7px 14px;font-size:13px;font-weight:700}
 
   /* STATS BAR */
-  .stats{
-    background:#fff;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    padding:30px 10px;
-    border-top-left-radius:20px;
-    border-top-right-radius:20px;
-    margin-top:-20px;
-    box-shadow:0 -4px 14px rgba(0,0,0,0.05);
-  }
-  .stat{
-    text-align:center;
-    margin:10px 30px;
-  }
-  .stat b{
-    display:block;
-    font-size:28px;
-    color:var(--brand);
-  }
-  .stat span{
-    color:var(--muted);
-    font-weight:600;
-    font-size:13px;
-  }
+  .stats{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:-22px auto 0;
+         border-radius:18px;border:1px solid var(--border);box-shadow:var(--shadow);padding:22px}
+  .stat{text-align:center}
+  .stat b{display:block;color:var(--brand);font-size:28px}
+  .stat span{color:var(--muted);font-weight:600;font-size:13px}
 
-  footer{
-    background:#fff;
-    border-top:1px solid var(--border);
-    color:#555;
-    text-align:center;
-    padding:30px 15px;
-    font-size:14px;
-  }
+  /* SECTION WRAPPER */
+  .wrap{max-width:1100px;margin:38px auto;padding:0 18px}
+  .head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .head h2{font-size:22px}
 
-  @media(max-width:700px){
-    .hero h1{font-size:32px;}
+  /* CARDS */
+  .grid{display:grid;gap:16px}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:1000px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){.grid-4{grid-template-columns:1fr}}
+  .card{background:#fff;border:1px solid var(--border);border-radius:var(--rad);padding:18px;box-shadow:var(--shadow);min-height:132px}
+  .card h3{margin:4px 0 6px}
+  .muted{color:var(--muted)}
+
+  /* HOW IT WORKS */
+  .steps{display:grid;gap:12px}
+  .step{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start}
+  .num{width:30px;height:30px;border-radius:10px;background:linear-gradient(180deg,#42a6e3,#1e73c7);
+       color:#fff;display:grid;place-items:center;font-weight:900}
+
+  /* TESTIMONIALS */
+  .testi{display:grid;gap:16px}
+  .t{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px;box-shadow:var(--shadow)}
+  .stars{color:#ffcc66;margin-bottom:4px}
+  .t small{color:var(--muted);font-weight:700}
+
+  /* CTA BLOCK */
+  .cta-block{background:#0f2f43;color:#eaf2f6;padding:26px;border-radius:18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .cta-block .cta-btn{background:#1e73c7;color:#fff;border:none;border-radius:12px;padding:12px 16px;font-weight:900}
+  .cta-block .cta-btn:hover{filter:brightness(1.06)}
+
+  footer{background:#fff;border-top:1px solid var(--border);text-align:center;color:#667786;padding:28px 15px;font-size:14px;margin-top:34px}
+
+  /* Mobile tweaks */
+  @media (max-width:760px){
+    .hero h1{font-size:34px}
+    .menu a{margin-left:14px}
   }
 </style>
 </head>
@@ -162,13 +90,11 @@
 <!-- NAV -->
 <nav>
   <div class="nav-wrap">
-    <div class="logo">
-      <!-- Inline SVG logo -->
-      <svg viewBox="0 0 88 88">
-        <circle cx="44" cy="44" r="40" fill="none" stroke="#1e73c7" stroke-width="6"/>
+    <div class="brand">
+      <!-- inline logo -->
+      <svg viewBox="0 0 88 88" aria-hidden="true"><circle cx="44" cy="44" r="40" fill="none" stroke="#1e73c7" stroke-width="6"/>
         <path d="M8,48 C20,41 28,39 40,39 C57,39 65,47 80,53" fill="none" stroke="#1e73c7" stroke-width="6" stroke-linecap="round"/>
-        <path d="M8,61 C20,54 28,52 40,52 C57,52 65,60 80,66" fill="none" stroke="#1e73c7" stroke-width="6" stroke-linecap="round"/>
-      </svg>
+        <path d="M8,61 C20,54 28,52 40,52 C57,52 65,60 80,66" fill="none" stroke="#1e73c7" stroke-width="6" stroke-linecap="round"/></svg>
       Bosphorus&nbsp;CLNC
     </div>
     <div class="menu">
@@ -176,7 +102,7 @@
       <a href="treatments.html">Treatments</a>
       <a href="reviews.html">Reviews</a>
       <a href="about.html">About</a>
-      <a class="cta" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I'd%20like%20a%20quote" target="_blank">Get Quote</a>
+      <a class="cta" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I%27d%20like%20a%20quote" target="_blank">Get Quote</a>
     </div>
   </div>
 </nav>
@@ -185,26 +111,81 @@
 <section class="hero">
   <h1>Book Your Treatment Package in Turkey.</h1>
   <p>Transparent prices. Verified clinics and surgeons. Concierge-level coordination in <strong>48 hours</strong>. You pay the clinic directly — we handle the rest.</p>
-  <a href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I%20want%20a%20written%20quote" target="_blank" class="btn">💬 WhatsApp Consultation & Quote</a>
-
+  <a class="btn" target="_blank" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I%20want%20a%20written%20quote">💬 WhatsApp Consultation & Quote</a>
   <div class="badges">
     <div class="badge">🏥 JCI-Accredited Hospitals</div>
     <div class="badge">👨‍⚕️ Board-Certified Surgeons</div>
+    <div class="badge">🔒 GDPR/KVKK aware</div>
   </div>
 </section>
 
 <!-- STATS -->
-<section class="stats">
+<section class="stats" aria-label="Key metrics">
   <div class="stat"><b>24h</b><span>Written Quote</span></div>
   <div class="stat"><b>48h</b><span>Priority Booking</span></div>
   <div class="stat"><b>60–70%</b><span>Below EU Prices</span></div>
   <div class="stat"><b>4+</b><span>Core Treatments</span></div>
 </section>
 
+<!-- TREATMENTS -->
+<section class="wrap">
+  <div class="head"><h2>Popular treatments</h2><a href="treatments.html">All treatments →</a></div>
+  <div class="grid grid-4">
+    <div class="card"><h3>Rhinoplasty</h3><p class="muted">Open/closed techniques by ENT & plastic surgeons. From €2,500.</p></div>
+    <div class="card"><h3>Dental Implants & Veneers</h3><p class="muted">All-on-4/6, zirconium veneers, full-arch. From €4,000.</p></div>
+    <div class="card"><h3>Hair Transplant (FUE/DHI)</h3><p class="muted">4,000–6,000 grafts, PRP included. From €1,200.</p></div>
+    <div class="card"><h3>Breast Surgery</h3><p class="muted">Augmentation, reduction, lift. From €3,000.</p></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="wrap">
+  <div class="head"><h2>How it works</h2></div>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div><b>Share photos & basics</b><br><span class="muted">WhatsApp or Instagram DM — 2 minutes.</span></div></div>
+    <div class="step"><div class="num">2</div><div><b>Get a written quote</b><br><span class="muted">Transparent range + 1–2 clinic options within 24h.</span></div></div>
+    <div class="step"><div class="num">3</div><div><b>48h priority booking</b><br><span class="muted">Pick your slot; travel help optional.</span></div></div>
+    <div class="step"><div class="num">4</div><div><b>Treatment & follow-up</b><br><span class="muted">Care by licensed clinics. We coordinate throughout.</span></div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="wrap">
+  <div class="head"><h2>Patient reviews</h2><a href="reviews.html">See all →</a></div>
+  <div class="testi">
+    <div class="t"><div class="stars">★★★★★</div>
+      “Berlin → Istanbul for rhinoplasty. Smooth coordination, natural result.”<br>
+      <small>— Julia, 🇩🇪</small>
+    </div>
+    <div class="t"><div class="stars">★★★★★</div>
+      “All-on-4 at half the Paris quote. Everything was explained in writing.”<br>
+      <small>— Marie, 🇫🇷</small>
+    </div>
+    <div class="t"><div class="stars">★★★★★</div>
+      “Asked on WhatsApp at night, got a quote next day, surgery booked in 48h.”<br>
+      <small>— David, 🇬🇧</small>
+    </div>
+  </div>
+</section>
+
+<!-- BIG CTA -->
+<section class="wrap">
+  <div class="cta-block">
+    <div>
+      <strong>Ready for your plan?</strong><br>
+      Send your photos and receive a written quote within 24 hours.
+    </div>
+    <div>
+      <a class="cta-btn" target="_blank" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I%20want%20a%20written%20quote">💬 WhatsApp — Get Your Quote</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  © 2025 Bosphorus CLNC — Istanbul Health Concierge  
-  · <a href="mailto:care@bosphorusclnc.com">care@bosphorusclnc.com</a> ·  
-  <a href="privacy.html">Privacy</a>
+  © 2025 Bosphorus CLNC — Booking Concierge (not a medical provider) ·
+  <a href="mailto:care@bosphorusclnc.com">care@bosphorusclnc.com</a> ·
+  <a href="privacy.html">Privacy</a> ·
+  <a href="about.html">About</a>
 </footer>
 
 </body>
