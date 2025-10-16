@@ -1,224 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Bosphorus CLNC — Istanbul Health Concierge</title>
-<meta name="description" content="Transparent pricing, verified clinics and surgeons, concierge-level coordination in Istanbul. Get a written quote within 24 hours."/>
-<style>
-  :root{
-    --bg:#f7f9fb; --surface:#ffffff; --ink:#0f2534; --muted:#5a6b7b;
-    --brand:#1e73c7; --brandDark:#2f2f2f; --accent:#0f7db7; --border:#e6ebf0;
-    --radius:14px; --shadow:0 10px 30px rgba(16,36,51,.08);
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--bg);color:var(--ink);
-    font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;overflow-x:hidden}
-  a{color:var(--accent);text-decoration:none}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosphorus CLNC — Istanbul Health Concierge | Transparent Pricing, 48h Booking</title>
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* This style block contains the essential CSS for a striking, modern look */
+        :root {
+            --primary-color: #17a2b8; /* Bosphorus Blue */
+            --whatsapp-green: #25D366;
+            --light-bg: #f7f7f7;
+            --text-color: #333;
+        }
 
-  /* container */
-  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+        body { font-family: 'Arial', sans-serif; color: var(--text-color); margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; padding: 0 15px; }
+        
+        /* Navigation/Header Style */
+        header { background-color: white; border-bottom: 1px solid #eee; padding: 15px 0; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        
+        /* Logo Image Styling */
+        .logo img {
+            height: 40px; /* Logoyu navigasyon çubuğuna uygun hale getirin */
+            width: auto;
+            vertical-align: middle;
+        }
 
-  /* NAV */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
-    backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border)}
-  .nav .row{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-  .menu a{color:var(--ink);font-weight:600;margin-left:18px}
-  .menu a:hover{opacity:.85}
-  .cta-top{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700}
-  .cta-top:hover{filter:brightness(1.06)}
+        nav a { margin: 0 12px; text-decoration: none; color: var(--text-color); transition: color 0.3s; }
+        nav a:hover { color: var(--primary-color); }
 
-  /* LOGO */
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo svg{height:34px;width:auto;display:block}
-  .word{display:flex;flex-direction:column;line-height:1}
-  .word .top{font-weight:800;letter-spacing:.2px;color:var(--brand);font-size:20px}
-  .word .bot{font-weight:800;letter-spacing:.5px;color:var(--brandDark);font-size:16px;margin-left:4px;margin-top:2px}
+        /* Hero Section Style */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/istanbul-bg.jpg') no-repeat center center/cover; 
+            color: white; 
+            padding: 120px 0; 
+            text-align: center;
+        }
+        .hero h1 { font-size: 3.5em; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 1.3em; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;}
 
-  /* HERO */
-  .hero{background:linear-gradient(180deg,#ffffff 0%,#eef5fb 100%);padding:52px 0 28px;border-bottom:1px solid var(--border)}
-  .hero .row{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
-  .hero h1{font-size:40px;line-height:1.15;margin:0 0 10px}
-  .hero p{color:var(--muted);max-width:720px;margin:0 0 18px}
-  .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
-  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 16px;border-radius:12px;
-    font-weight:800;border:1px solid var(--border);background:#fff;color:var(--ink)}
-  .btn.primary{background:var(--accent);color:#fff;border:none}
-  .btn.primary:hover{filter:brightness(1.06)}
-  .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-  .badge{background:#eef6ff;border:1px solid #d8e9ff;color:#0b4c7a;padding:6px 10px;border-radius:999px;
-    font-weight:700;font-size:12px}
+        /* WhatsApp CTA Style (The Striking Button) */
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: var(--whatsapp-green); 
+            color: white !important; /* !important ensures it overrides all others */
+            text-decoration: none;
+            border-radius: 50px; 
+            font-weight: bold;
+            font-size: 1.3em;
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover { background-color: #128C7E; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6); }
 
-  .hero-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
-  .stat{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:6px}
-  .pill{background:#f3f7fb;border:1px solid var(--border);border-radius:12px;padding:14px;text-align:center}
-  .pill b{display:block;font-size:22px}
-  .pill span{color:var(--muted);font-size:12px}
+        /* Fast Facts Style (Trust Bar) */
+        .fast-facts { display: flex; justify-content: space-around; background-color: var(--light-bg); padding: 30px 0; margin-top: -60px; z-index: 10; position: relative; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .fact-item { text-align: center; padding: 15px 10px; flex-basis: 25%; }
+        .fact-number { font-size: 2.5em; font-weight: 800; color: var(--primary-color); line-height: 1; }
+        .fact-description { font-size: 0.9em; text-transform: uppercase; color: #777; margin-top: 5px; }
 
-  /* SECTIONS */
-  .head{display:flex;align-items:center;justify-content:space-between;margin:28px 0 14px}
-  .head h2{font-size:22px;margin:0}
-  .grid{display:grid;gap:16px}
-  .grid-4{grid-template-columns:repeat(4,1fr)}
-  @media (max-width:1000px){.grid-4{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:600px){.grid-4{grid-template-columns:1fr}}
-  .card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow);min-height:128px}
-  .card h3{margin:4px 0 6px}
-  .muted{color:var(--muted)}
+        /* Treatment Cards Style */
+        .treatment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .treatment-card { background: white; border: 1px solid #eee; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .treatment-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .card-body { padding: 20px; }
+        .card-price { font-size: 1.2em; color: var(--whatsapp-green); font-weight: bold; margin-top: 10px; }
+        
+        /* How It Works Style */
+        .how-it-works { background-color: var(--light-bg); padding: 60px 0; }
+        .step-timeline { display: flex; justify-content: space-between; position: relative; padding: 40px 0; }
+        .step-item { flex-basis: 23%; text-align: center; position: relative; padding: 0 10px; }
+        .step-icon { width: 60px; height: 60px; line-height: 60px; background-color: var(--primary-color); color: white; border-radius: 50%; margin: 0 auto 15px; font-size: 1.5em; border: 5px solid white; z-index: 2; position: relative; }
+        .step-timeline:before { content: ''; position: absolute; top: 70px; left: 10%; right: 10%; height: 4px; background: #ddd; z-index: 1; }
 
-  /* STEPS */
-  .steps .step{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px}
-  .n{width:28px;height:28px;border-radius:9px;background:linear-gradient(180deg,#42a6e3,#0f7db7);color:#fff;display:grid;place-items:center;font-weight:900}
-
-  /* TESTIMONIALS */
-  .t-grid{display:grid;gap:14px}
-  .t{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px}
-  .stars{color:#ffcc66;margin-bottom:4px}
-
-  /* FAQ */
-  details{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px}
-  details+details{margin-top:10px}
-  summary{cursor:pointer;font-weight:800}
-  details p{margin-top:8px;color:var(--muted)}
-
-  /* CTA */
-  .cta-block{background:#0f2f43;color:#eaf2f6;padding:28px;border-radius:16px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-  .cta-block .cta-btn{background:#1e73c7;color:#fff;border:none;border-radius:12px;padding:12px 16px;font-weight:900}
-  .cta-block .cta-btn:hover{filter:brightness(1.06)}
-
-  /* FOOTER */
-  footer{margin-top:34px;border-top:1px solid var(--border);background:#ffffff}
-  .foot{padding:18px 0;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .foot a{color:var(--muted)}
-  .foot a:hover{color:var(--ink)}
-
-  /* Mobile tweaks */
-  @media (max-width:760px){
-    .hero h1{font-size:32px}
-    .logo svg{height:30px}
-    .word .top{font-size:18px} .word .bot{font-size:14px}
-  }
-</style>
+        /* Reviews Style */
+        .review-item { background: white; padding: 30px; border-radius: 8px; border-left: 5px solid var(--primary-color); box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 20px;}
+        .review-text { font-style: italic; color: #555; margin-bottom: 15px; }
+        .stars { color: gold; margin-right: 10px; }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero { padding: 80px 0; }
+            .hero h1 { font-size: 2.5em; }
+            .fast-facts { flex-direction: column; margin-top: 0; border-radius: 0; box-shadow: none; }
+            .fact-item { flex-basis: 100%; padding: 15px 0; border-bottom: 1px solid #eee; }
+            .step-timeline { flex-direction: column; padding: 0; }
+            .step-item { margin-bottom: 30px; flex-basis: 100%; }
+            .step-timeline:before { display: none; } /* Hide the line in mobile view */
+            nav { display: none; } /* Simple hiding for mobile, full site needs a hamburger menu script */
+        }
+    </style>
 </head>
 <body>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="wrap row">
-    <div class="logo" aria-label="Bosphorus CLNC">
-      <!-- Dalgalı ikon + wordmark (inline SVG) -->
-      <svg viewBox="0 0 88 88" aria-hidden="true" focusable="false">
-        <circle cx="44" cy="44" r="40" fill="none" stroke="#1e73c7" stroke-width="6"/>
-        <path d="M8,48 C20,41 28,39 40,39 C57,39 65,47 80,53" fill="none" stroke="#1e73c7" stroke-width="6" stroke-linecap="round"/>
-        <path d="M8,61 C20,54 28,52 40,52 C57,52 65,60 80,66" fill="none" stroke="#1e73c7" stroke-width="6" stroke-linecap="round"/>
-      </svg>
-      <div class="word">
-        <span class="top">Bosphorus</span>
-        <span class="bot">CLNC</span>
-      </div>
-    </div>
-    <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="treatments.html">Treatments</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
-      <a class="cta-top" target="_blank" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I%20need%20a%20quote.">Get Quote</a>
-    </div>
-  </div>
-</div>
+    <header>
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/bosphorus-clnc-logo.png" alt="Bosphorus CLNC Logo">
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="treatments.html">Treatments</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="about.html">About</a>
+                <a href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%2C%20I%20need%20a%20quote." class="cta-button" style="padding: 8px 20px; font-size: 1em; margin-left: 20px;">Get Quote</a>
+            </nav>
+        </div>
+    </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap row">
-    <div>
-      <h1>Book your treatment package in Turkey.</h1>
-      <p>Transparent prices. Verified clinics and surgeons. Concierge-level coordination in <strong>48 hours</strong>. You pay the clinic directly — we handle the rest.</p>
-      <div class="actions">
-        <a class="btn primary" target="_blank" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%2C%20I%27d%20like%20a%20treatment%20quote.">💬 WhatsApp Consultation</a>
-        <a class="btn" target="_blank" href="https://instagram.com/bosphorusclnc">📸 See Instagram</a>
-      </div>
-      <div class="badges">
-        <span class="badge">✅ JCI-accredited hospitals</span>
-        <span class="badge">✅ Board-certified surgeons</span>
-        <span class="badge">✅ GDPR/KVKK aware</span>
-      </div>
-    </div>
-    <div class="hero-card">
-      <div class="head"><h2>Fast facts</h2></div>
-      <div class="stat">
-        <div class="pill"><b>24h</b><span>Written quote</span></div>
-        <div class="pill"><b>48h</b><span>Priority booking</span></div>
-        <div class="pill"><b>60–70%</b><span>Below EU prices</span></div>
-        <div class="pill"><b>4</b><span>Core treatments</span></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="hero">
+        <div class="container">
+            <h1>Book Your Treatment Package in Turkey.</h1>
+            <p>Transparent prices. Verified clinics and surgeons. Concierge-level coordination in **48 hours**. You pay the clinic directly — we handle the rest.</p>
+            
+            <a href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%2C%20I%20need%20a%20quote." class="cta-button">
+                <i class="fab fa-whatsapp"></i> WhatsApp Consultation & Quote
+            </a>
 
-<!-- TREATMENTS -->
-<section class="wrap">
-  <div class="head"><h2>Popular treatments</h2><a href="treatments.html">All treatments →</a></div>
-  <div class="grid grid-4">
-    <div class="card"><h3>Rhinoplasty</h3><p class="muted">Open/closed techniques by ENT & plastic surgeons.<br/>From €2,500</p></div>
-    <div class="card"><h3>Dental Implants & Veneers</h3><p class="muted">All-on-4/6, zirconium veneers, full-arch.<br/>From €4,000</p></div>
-    <div class="card"><h3>Hair Transplant (FUE/DHI)</h3><p class="muted">4,000–6,000 grafts, PRP included.<br/>From €1,200</p></div>
-    <div class="card"><h3>Breast Surgery</h3><p class="muted">Augmentation, reduction and lift.<br/>From €3,000</p></div>
-  </div>
-</section>
+            <div style="margin-top: 30px;">
+                <span style="display: inline-block; margin: 0 10px; background-color: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 5px; font-size: 0.9em;"><i class="fas fa-check-circle"></i> JCI-Accredited Hospitals</span>
+                <span style="display: inline-block; margin: 0 10px; background-color: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 5px; font-size: 0.9em;"><i class="fas fa-user-md"></i> Board-Certified Surgeons</span>
+            </div>
+        </div>
+    </section>
 
-<!-- HOW IT WORKS -->
-<section class="wrap">
-  <div class="head"><h2>How it works</h2></div>
-  <div class="grid" style="gap:12px">
-    <div class="steps">
-      <div class="step"><div class="n">1</div><div><b>Share photos & basics</b><br/><span class="muted">WhatsApp or Instagram DM — 2 minutes.</span></div></div>
-      <div class="step"><div class="n">2</div><div><b>Get a written quote</b><br/><span class="muted">Transparent price range + 1–2 clinic options within 24h.</span></div></div>
-      <div class="step"><div class="n">3</div><div><b>48h priority booking</b><br/><span class="muted">Pick your slot; travel plan optional.</span></div></div>
-      <div class="step"><div class="n">4</div><div><b>Treatment & follow-up</b><br/><span class="muted">Care by licensed clinics. We coordinate throughout.</span></div></div>
-    </div>
-  </div>
-</section>
+    <section class="fast-facts">
+        <div class="container">
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                <div class="fact-item">
+                    <div class="fact-number">24h</div>
+                    <div class="fact-description">Written Quote</div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-number">48h</div>
+                    <div class="fact-description">Priority Booking</div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-number">60–70%</div>
+                    <div class="fact-description">Below EU Prices</div>
+                </div>
+                <div class="fact-item">
+                    <div class="fact-number">4+</div>
+                    <div class="fact-description">Core Treatments</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- TESTIMONIALS -->
-<section class="wrap">
-  <div class="head"><h2>Why patients trust us</h2></div>
-  <div class="t-grid">
-    <div class="t"><div class="stars">★★★★★</div>“Berlin → Istanbul for rhinoplasty. Smooth coordination, natural result.” — 🇩🇪 Julia</div>
-    <div class="t"><div class="stars">★★★★★</div>“All-on-4 at half the Paris quote. Clear, written plan.” — 🇫🇷 Marie</div>
-    <div class="t"><div class="stars">★★★★★</div>“WhatsApp in the evening, quote next day, surgery booked in 48h.” — 🇬🇧 David</div>
-  </div>
-</section>
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 10px;">Our Most Popular Treatments</h2>
+            <p style="text-align: center; font-size: 1.1em; color: #777; margin-bottom: 40px;">Specialized and high-demand procedures with verified specialists.</p>
+            
+            <div class="treatment-grid">
+                <div class="treatment-card">
+                    <img src="img/rhinoplasty.jpg" alt="Rhinoplasty" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 style="margin-top: 0; color: #333;">Rhinoplasty</h3>
+                        <p style="font-size: 0.95em;">Open/closed techniques by ENT & plastic surgeons.</p>
+                        <div class="card-price">From €2,500</div>
+                    </div>
+                </div>
+                
+                <div class="treatment-card">
+                    <img src="img/dental.jpg" alt="Dental Treatments" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 style="margin-top: 0; color: #333;">Dental Implants & Veneers</h3>
+                        <p style="font-size: 0.95em;">All-on-4/6, zirconium veneers, full-arch solutions.</p>
+                        <div class="card-price">From €4,000</div>
+                    </div>
+                </div>
 
-<!-- FAQ -->
-<section class="wrap">
-  <div class="head"><h2>FAQ</h2></div>
-  <details><summary>Do I pay you or the clinic?</summary><p>You pay the clinic directly. We coordinate booking and logistics.</p></details>
-  <details><summary>Is the quote final?</summary><p>We give a transparent price range after pre-assessment; the clinic confirms the final plan on consultation.</p></details>
-  <details><summary>Which hospitals do you use?</summary><p>Primarily JCI-accredited hospitals or A-class private facilities.</p></details>
-  <details><summary>How do you handle privacy?</summary><p>We follow GDPR/KVKK principles; photos are used only for assessment and deleted on request.</p></details>
-</section>
+                <div class="treatment-card">
+                    <img src="img/hair-transplant.jpg" alt="Hair Transplant" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 style="margin-top: 0; color: #333;">Hair Transplant (FUE/DHI)</h3>
+                        <p style="font-size: 0.95em;">4,000–6,000 grafts, PRP treatment included.</p>
+                        <div class="card-price">From €1,200</div>
+                    </div>
+                </div>
 
-<!-- BIG CTA -->
-<section class="wrap">
-  <div class="cta-block">
-    <div><strong>Ready for your plan?</strong><br/>Send your photos and receive a written quote within 24 hours.</div>
-    <div><a class="cta-btn" target="_blank" href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%20—%20I%20want%20a%20written%20quote.">💬 WhatsApp — Get Your Quote</a></div>
-  </div>
-</section>
+                <div class="treatment-card">
+                    <img src="img/breast-surgery.jpg" alt="Breast Surgery" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 style="margin-top: 0; color: #333;">Breast Surgery</h3>
+                        <p style="font-size: 0.95em;">Augmentation, reduction and lift procedures.</p>
+                        <div class="card-price">From €3,000</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="treatments.html" style="color: var(--primary-color); text-decoration: none; font-weight: bold; font-size: 1.1em;"><i class="fas fa-arrow-circle-right"></i> View All Treatments</a>
+            </div>
+        </div>
+    </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="wrap foot">
-    <div>© 2025 Bosphorus CLNC — Booking Concierge (not a medical provider)</div>
-    <div>
-      <a href="mailto:care@bosphorusclnc.com">care@bosphorusclnc.com</a> ·
-      <a target="_blank" href="https://instagram.com/bosphorusclnc">Instagram</a> ·
-      <a href="privacy.html">Privacy</a> ·
-      <a href="about.html">About</a>
-    </div>
-  </div>
-</footer>
+    <section class="how-it-works">
+        <div class="container">
+            <h2 style="text-align: center; color: #333; margin-bottom: 50px;">How It Works With Bosphorus CLNC</h2>
+            
+            <div class="step-timeline">
+                <div class="step-item">
+                    <div class="step-icon"><i class="fab fa-whatsapp"></i></div>
+                    <h4 style="color: var(--primary-color);">1. Share Photos & Basics</h4>
+                    <p style="font-size: 0.9em;">WhatsApp or Instagram DM — 2 minutes.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-file-invoice"></i></div>
+                    <h4 style="color: var(--primary-color);">2. Get a Written Quote</h4>
+                    <p style="font-size: 0.9em;">Transparent price range + 1-2 clinic options within 24h.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h4 style="color: var(--primary-color);">3. 48h Priority Booking</h4>
+                    <p style="font-size: 0.9em;">Pick your slot; we coordinate travel planning if needed.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon"><i class="fas fa-hospital"></i></div>
+                    <h4 style="color: var(--primary-color);">4. Treatment & Follow-up</h4>
+                    <p style="font-size: 0.9em;">Care by licensed clinics. We coordinate throughout your stay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <h2 style="text-align: center; color: var(--primary-color); margin-bottom: 40px;">Why Patients Trust Us</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">“Flew from Berlin to Istanbul for rhinoplasty. Smooth coordination, natural result.”</div>
+                    <p style="font-weight: bold; margin: 0;">— Julia 🇩🇪 (Germany)</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">“All-on-4 dental treatment at half the Paris quote. Clear, written plan from the start.”</div>
+                    <p style="font-weight: bold; margin: 0;">— Marie 🇫🇷 (France)</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="stars">★★★★★</div>
+                    <div class="review-text">“WhatsApp in the evening, quote next day, surgery booked in 48 hours. Highly efficient.”</div>
+                    <p style="font-weight: bold; margin: 0;">— David 🇬🇧 (UK)</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section style="background-color: var(--primary-color); color: white; padding: 50px 0; text-align: center;">
+        <div class="container">
+            <h2 style="margin-top: 0;">Ready For Your Treatment Plan?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">Send your photos and receive a detailed written quote within 24 hours.</p>
+            <a href="https://wa.me/905325211446?text=Hello%20Bosphorus%20CLNC%2C%20I%20want%20a%20detailed%20written%20quote." class="cta-button" style="background-color: white; color: var(--primary-color) !important; box-shadow: none;">
+                <i class="fab fa-whatsapp"></i> Get Your Quote Now
+            </a>
+        </div>
+    </section>
+
+    <footer style="padding: 30px 0; background-color: #333; color: #ccc; font-size: 0.9em; text-align: center;">
+        <div class="container">
+            <p style="margin-bottom: 15px;">
+                <img src="img/bosphorus-clnc-logo.png" alt="Bosphorus CLNC Logo" style="height: 50px; width: auto; vertical-align: middle; filter: grayscale(100%) brightness(200%);"> 
+                <span style="display: block; margin-top: 10px;">© 2025 Bosphorus CLNC — Booking Concierge (Not a Medical Provider)</span>
+            </p>
+            <p>
+                <a href="mailto:care@bosphorusclnc.com" style="color: #ccc; margin: 0 10px;">care@bosphorusclnc.com</a> ·
+                <a href="https://instagram.com/bosphorusclnc" style="color: #ccc; margin: 0 10px;">Instagram</a> ·
+                <a href="privacy.html" style="color: #ccc; margin: 0 10px;">Privacy</a> ·
+                <a href="about.html" style="color: #ccc; margin: 0 10px;">About</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
